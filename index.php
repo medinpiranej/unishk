@@ -10,8 +10,6 @@
 	 else $kat=-1;
 	 
 	 if(($kerk==-1)&&($perd==-1))shfaq_kerkim_logim();
-	  
-    if (isset($_COOKIE["jetaid"]))header("Location: shtepia.php");
-	else header("Location: login.php");
+	 
 
 ?>
