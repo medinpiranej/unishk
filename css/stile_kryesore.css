@@ -1,0 +1,26 @@
+.trupi{
+	width:1000px;
+	height:1000px;
+	background-color:lightgrey;
+	margin:0px auto 0px auto;
+}
+.koka{
+    width:1000px;
+	height:150px;
+	background-color:grey;
+}
+.login{
+	width:1000px;
+	height:650px;
+	background-color:yellow;
+	
+}
+#koka_el{
+	display: inline-block;
+	float:left;
+}
+.k_login{
+	background-color:red;
+	padding-top:30px;
+	padding-left:200px;
+}
