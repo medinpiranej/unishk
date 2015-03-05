@@ -1,26 +1,23 @@
 .trupi{
 	width:1000px;
-	height:1000px;
-	background-color:lightgrey;
 	margin:0px auto 0px auto;
+    border:2px solid green;/* Vetem per Debug  */
 }
 .koka{
     width:1000px;
 	height:150px;
-	background-color:grey;
+    border:2px solid green;/* Vetem per Debug  */
 }
-.login{
+.data{
 	width:1000px;
-	height:650px;
-	background-color:yellow;
-	
+    border:2px solid green;/* Vetem per Debug  */
 }
 #koka_el{
 	display: inline-block;
 	float:left;
 }
 .k_login{
-	background-color:red;
 	padding-top:30px;
 	padding-left:200px;
+    border:2px solid green;/* Vetem per Debug  */
 }
