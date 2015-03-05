@@ -1,0 +1,1 @@
+sa ta rregulloj databazen do ti vendosi ktu skriptet
