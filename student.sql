@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS `student` (
   `universiteti` varchar(200) NOT NULL,
   `dega` varchar(200) NOT NULL,
   `email` varchar(40) NOT NULL,
+  `pas` VARCHAR(40) NOT NULL ,
   `cel` varchar(15) NOT NULL,
   `adresa` varchar(100) NOT NULL,
   `cv` varchar(40) NOT NULL,
