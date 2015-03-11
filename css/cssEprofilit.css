@@ -1,0 +1,199 @@
+@charset "utf-8";
+.tedhenatcontainer{
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	
+	padding-left:10px;
+	
+	}
+.leftdiv{
+	margin-top: 100px;
+	float: left;
+	width: 49%;
+	height: 300px;
+	background-color: #fff;
+	border-bottom: 4px solid #0099FF;
+	border-top: 4px solid #0099Ff;
+	border-radius: 5px;
+	margin-right: 2px;
+	margin-left: auto;
+	margin-bottom:100px;
+		line-height: 20px;
+}
+.rightdiv{
+	margin-top: 100px;
+	float: left;
+	width: 49%;
+	height: 300px;
+	background-color: #fff;
+	border-bottom: 4px solid #0099FF;
+	border-top: 4px solid #0099Ff;
+	border-radius: 5px;
+	margin-right: auto;
+	margin-left: 2px;
+    
+	margin-bottom:100px;
+	line-height: 20px;
+}
+#profileheaderlabel{
+	background-color: #333;
+	height: 22px;
+	position: relative;
+	font-size: 14px;
+	color: #fff;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 2px;
+	
+	
+	}
+#ndryshofotobtn{
+	float:right;
+	width:100px;
+	padding:1px 1px;
+	height:20px;
+	margin-top:2px;
+	margin-bottom:2px;
+	}
+	
+	#ndryshofjalkalimintext{
+		font-size:12px;	
+	font-weight: bold;
+	color:#0099ff;
+	cursor:pointer;
+		}
+		
+		#ndryshofjalkalimintext:hover{
+		font-size:12px;	
+	font-weight: bold;
+	color:#444;
+	cursor:pointer;
+		}
+		#ndryshofjalkalimindiv{
+		width:300px;
+	height:30px;
+	line-height:15px;
+		margin:auto;
+		}
+		#ndryshofjalkalimin_kutite input{
+			margin:0;
+			}
+			#ndryshofjalkalimin_kutite {
+			display:none;
+			}
+		#ndryshofjalkalimin_kutite input[type=button]{
+			width:60px;
+			height:20px;
+			margin:1;
+			padding:2;
+			line-height:10px;
+			display:inline;
+			}
+		#ndryshofjalkalimin_kutite p {
+			font-size:12px;	
+	font-weight: bold;
+	color:#0099ff;
+	cursor:pointer;
+	margin:0;
+	padding:0;
+			
+			}
+	#ndryshofjalkalimindiv2 {
+			width:205px;
+			margin-left:auto;
+			margin-right:auto;
+		
+		}
+#old_pass,#new_pass,#confirm_pass{
+	width:200px;
+	padding: 3px 10px;
+	}
+		
+#profpiccont{
+	
+	width: 275px;
+	height:275px;
+	margin-left: auto;
+	margin-right: auto;
+	display: compact;
+	}
+	#profpiccont img{
+	width:270px;
+	height:100%;
+	
+	}
+#atagfoto{
+	width: 35px;
+	height: 35px;
+	float:right;
+
+
+	}
+#butonprofili{
+	vertical-align:text-top;
+padding-top:5px;
+    text-align:center;
+	line-height:48px;
+	height:37px;
+	}
+	#fotoprofiliUL{
+		margin-left:-25px;
+		float:left;
+		
+		}
+		#fotoprofiliUL li{
+		padding:0px;
+		
+		}
+		#fotoprofiliUL li a{
+		height:25px;
+		line-height:25px;
+		
+		}
+	#te_dhenat_personale_div{
+	width:300px;
+	height:35px;
+		
+		margin:auto;
+		
+		}
+		#te_dhenat_personale_div p{
+	font-size: 14px;
+	font-weight: bold;
+	color:#0099ff;
+			
+			}
+	#te_dhenat_personale_div input[class=disablettext]{
+	width:100%;
+	padding:4px;
+	border-radius:3px;
+	font-size: 14px;
+	font-weight: bold;
+	color:#000;
+			border:0px;
+			}
+#uploadprofilepic{
+	display:none;
+	margin-top:15px;
+	}
+			
+#upload_pic_path{
+	margin-left:10px;
+    width:200px;
+	padding:4px;
+	border-radius:3px;
+	font-size: 13px;
+	font-weight: bold;
+	color:#333;
+			border:0px;
+	
+	}
+	input[id=ngarko],input[id=anulo]{
+		
+	width:70px;
+	padding:1px 1px;
+	height:20px;
+	margin-top:2px;
+	margin-bottom:2px;
+		}

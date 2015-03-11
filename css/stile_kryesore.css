@@ -1,198 +1,508 @@
 .header-container{
+
    position:fixed;
+
 left:0px;
+
 top:0px;
-height:50px;
+
+height:44px;
+
 width:100%;
-background-color:#006699;
--webkit-box-shadow: 0px 1px 30px -11px rgba(8,21,61,1);
--moz-box-shadow: 0px 1px 30px -11px rgba(8,21,61,1);
-box-shadow: 0px 1px 30px -11px rgba(8,21,61,1);
+
+background-color:#333333;
+border-bottom: 4px solid #1b9bff;
+-webkit-box-shadow: 0px 3px 30px -11px rgba(8,21,61,1);
+
+-moz-box-shadow: 0px 3px 30px -11px rgba(8,21,61,1);
+
+box-shadow: 0px 3px 30px -11px rgba(8,21,61,1);
+
+z-index:999;
+
 }
 
+
+
 .header{
-height:50px;
+
+height:44px;
+
+
 
 width:960px;
 
+
+
 margin-left:auto;
+
 margin-right:auto;
+
+
 
 padding-left:10px;
 
+
+
 }
+
 .divnav {
 
+margin:0;
+
+padding:0;
+
 float:right;
-width:50%;
+
+width:70%;
 
 }
+
 .divlogo{
-width:50%;
+
+width:30%;
+
 float:left;
 
+
+
 }
+
+
 
 .divnav ul {
+
+margin:0;
+
+padding:0;
+
+position:relative;
+
 list-style-type:none;
+
+ text-transform: uppercase;
+
 }
-.divnav ul li {
+
+.divnav ul li{
+
 float:right;
+
+position:relative;
+
+list-style-type:none;
+
 }
+
+.divnav ul li:hover{
+
+background-color:#1b9bff;
+
+}
+
+.divnav ul li a,visited{
+
+color:#0099FF;
+
+}
+
+.divnav ul li:hover ul{
+
+display:block;
+
+}
+
  .divnav ul li a {
 
-display:inline;
+display:block;
 
-width:60px;
-line-height:0px;
+height:34px;
 
-margin:5px;
+width:110px;
+
+padding:7px;
+
+text-align:center;
 
   font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
-  color:#fff;
-  font-size: 16px;
- 
+
+  color:#FFFFFF;
+
+  font-size: 14px;
+
   text-decoration: none;
-padding:5px 5px 10px 5px ;
+
+  line-height:40px;
+
+}
+
+.divnav ul li a:hover {
+
+color:#fff;
 
 
 }
-.divnav ul li a:hover {
 
-  font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
-  color:#0099FF;
+.divnav ul li ul li:hover{
 
- background-color:#FFFFFF;
+background-color:#1b9bff;
+
+}
+
+.divnav ul li ul li a:hover{
+
+background-color:#333;
+
+color:#fff;
+
+}
+
+.divnav ul ul {
+
+position:absolute;
+ text-transform: uppercase;
+z-index:300;
+border:1px solid  #333;
+display:none;
+
+top:48px;
+
+background-color:#1b9bff;
+
+color:#006699;
+
+-webkit-box-shadow: 0px 3px 30px -11px rgba(8,21,61,1);
+
+-moz-box-shadow: 0px 3px 30px -11px rgba(8,21,61,1);
+
+box-shadow: 0px 3px 30px -11px rgba(8,21,61,1);
+
+border-top:0;
+
+
+
+
+
+}
+
+.divnav ul ul li a{
+
+color:#fff;
+
+width:140px;
+
+padding:5px;
+
+line-height:35px;
 
 }
 
 .searchdiv{
-width:80%;
+
+width:100%;
+padding-left:7px;
 margin-left:auto;
+
 margin-right:auto;
 
+
+
 }
+
 #search {
+
  padding:8px 15px;
+
  background:#F8F8F8 ;
+
  border:1px solid #207cca;
- width:80%;
+
+ width:80.2%;
+
  border-radius:2px;
+
 }
+
 #searchbtn{
+
                 position:relative;
+
                 padding:7px 15px;
+
                 left:-10px;
+
                 border:2px solid #207cca;
+
                 background-color:#207cca;
+
                 color:#fafafa;
-				width:18%;
+
+				width:18.5%;
+
 				border-radius:2px;
-			
-				
+
 }
+
 #searchbtn:hover{
-               
-              
                 border:2px solid #0099FF;
                 background-color:#0099FF;
-               
-				
+}
+#filtersearchdiv{
+width:100%;
+
+
+border-top: 4px solid #1b9bff;
+height:100px;
+margin-bottom:20px;
 }
 
+#divheaderlabel{
+	background-color: #333;
+	height: 20px;
+	position: relative;
+	font-size: 14px;
+	line-height:20px;
+	color: #fff;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 2px;
+	
+	
+	}
+	#divheaderlabelgray{
+
+	height: 16px;
+	position: relative;
+	font-size: 14px;
+	font-weight:bold;
+	line-height:20px;
+	color: #000;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	margin-bottom:8px;
+	
+	
+	}
+	#filteritemdiv{
+	width:19.2%;
+	float:left;
+	padding:3px;
+	
+	display:block;
+	
+	}
+	#combobox{
+	width:100%;
+	border:1px solid #1b9bff;
+	padding:2px;
+	}
+	
 .logindivcontainer{
+
 width:50%;
 
+
+
 margin-top:auto;
+
 margin-left:auto;
+
 margin-right:auto;
+
 margin-bottom:auto;
+
 }
+
 .logindiv{
 
+
+
 width:70%;
+
 margin-top:120px;
+
 margin-left:auto;
+
 margin-right:auto;
+
 margin-bottom:auto;
+
 }
+
 .logindiv input[type=text] ,input[type=password]{
+
 width:100%;
+
  padding:8px 15px;
+
  background:#F8F8F8 ;
+
  border:1px solid #207cca;
+
  margin:10px auto;
+
  border-radius:2px;
+
 }
+
 .logindiv input[type=submit] ,input[type=button]{
+
 width:48%;
+
  padding:8px 15px;
+
 background-color:#207cca;
+
               color:#fafafa;
+
 			  border:2px solid #207cca;
+
  margin:10px auto;
+
  border-radius:2px;
+
 }
+button{
+	padding:8px 15px;
+	background-color:#207cca;
+
+              color:#fafafa;
+
+			  border:2px solid #207cca;
+
+ margin:10px auto;
+
+ border-radius:2px;
+	}
+
 .logindiv input[type=submit]{
+
 float:right;
+
 }
+
 .logindiv input[type=button]{
+
 float:left;
+
 }
+
 input[type=submit]:hover , [type=button]:hover{                       
+
                 border:2px solid #0099FF;
+
                 background-color:#0099FF;             			
+
 }
+
+
 
 body{
 
+
+
 font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
+
 	font-size:30px;
+
 	font-style: normal;
+
 	font-variant: normal;
+
 	font-weight:200;
+
 	line-height: 48px;
+
 	color:#f0f0f0;
+
 	background-color:#D0D0D0 ;
+
 	
+
 }
+
 h5 {
+
 	font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
+
 	font-size:12px;
+
 	font-style: normal;
+
 	font-variant: normal;
+
 	font-weight:200;
+
 	line-height: 20px;
+
 	color:#f0f0f0;
+
 	
+
 }
+
 .content{
-height:400px;
-background:#fff 	;
-width:970px;
-margin-top:49px;
-margin-left:auto;
-margin-right:auto;
-border:1px solid #C0C0C0  ;
+	position: relative;
+	
+	background: #fff;
+	width: 970px;
+	margin-top: 43px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #C0C0C0;
+	bottom: 0px;
+	margin-bottom: auto;
+	background-origin: content-box;
+ overflow:auto;
 }
+
+#divqendror{
+width:80%;
+
+margin-left:auto;
+
+margin-right:auto;
+margin-top:60px;
+
+}
+
 .footer{
 
-background-color:#006699;
+
+
+background-color:#333;
+border-top: 4px solid #1b9bff;
 width:960px;
-margin-top:-1px;
+
+margin-top:0px;
+
 margin-left:auto;
+
 margin-right:auto;
+
 -webkit-box-shadow: 3px 1px 30px -2px rgba(8,21,61,1);
+
 -moz-box-shadow: 0px 1px 30px -11px rgba(8,21,61,1);
+
 box-shadow: 0px 1px 30px -11px rgba(8,21,61,1);
+
 display:block;
+
 float:none;
 overflow:hidden;
 padding-left:20px;
 
+
+
 }
+
 .copyrightdiv,.sitefooterinfodiv{
+
 width:100%;
+
 text-align:center;
+
 margin-top:0px;
+
 }

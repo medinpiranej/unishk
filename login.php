@@ -8,7 +8,7 @@ if((!isset($_COOKIE["lg"]))&&(isset($_POST["emri"],$_POST["pas"]))){
       $student=exec_query("Select * from student where emri='$emri'", $lidhja);
 	  if(!empty($student)){
 	  	  if($student[0]["pas"]==$pas){
-	  	  	if(setcookie("lg",$student[0]["stud_id"],time()+3600))header("location: index.php?student={$student[0]["stud_id"]}");
+	  	  	if(setcookie("lg",$student[0]["stud_id"],time()+3600))header("location: profili.html?student={$student[0]["stud_id"]}");
 			else header("location: index.php?nuk_lejohen_cookies=true");
 	      }else header("Location:index.php?gabim_ne_login=true");
 	  }else header("Location:index.php?gabim_ne_login=true");

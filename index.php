@@ -1,5 +1,5 @@
 <?php
-     include '/php/func.php';
+     include 'php/func.php';
      if(isset($_COOKIE["lg"]))$perd=$_COOKIE["lg"]; // Kontrollojme nqs ndonje perdorues eshte i loguar
 	 else $perd=-1;
 	 
