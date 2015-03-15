@@ -52,6 +52,11 @@ CREATE TABLE IF NOT EXISTS `student` (
 INSERT INTO `student` (`stud_id`, `emri`, `mbiemri`, `universiteti`, `dega`, `email`, `cel`, `adresa`, `cv`, `tema_diplomes`, `pershkrimi_temes`, `data_fillimit`, `data_mbarimit`, `gjinia`) VALUES
 (1, 'Medin', 'Piranej', 'Luigj Guraguqi', 'Informatike', 'mpiranej@gmail.com', '0674654868', 'mushan,dajc,shkoder,Shqiperi', 'nje _cv', 'tema diplomes', 'pershkrimi i temes', '2012-09-11', '2015-09-23', 1);
 
+INSERT INTO `student` (`stud_id`, `emri`, `mbiemri`, `universiteti`, `dega`, `email`, `pas`, `cel`, `adresa`, `cv`, `tema_diplomes`, `pershkrimi_temes`, `data_fillimit`, `data_mbarimit`, `gjinia`)
+ VALUES (NULL, 'Medina', 'Cura', 'Luigj Gurakuqi', 'Informatike', 'emailimedins@live.com', 'se_di', '-', '-', '-', '-', '-', '2015-03-09', '2015-03-11', '0'),
+        (NULL, 'Bamirs', 'Bajraktari', 'Luigj Gurakuqi', 'Informatik', 'emailibamirsit@live.com', 'se_di', '-', '-', '-', '-', '-', '2015-03-07', '2015-03-26', '1');
+        (NULL, 'Bamirs', 'Bajraktari', 'Luigj Gurakuqi', 'Informatik', 'emailibamirsit@live.com', 'se_di', '-', '-', '-', '-', '-', '2015-03-07', '2015-03-26', '1');
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
