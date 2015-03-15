@@ -1,0 +1,5 @@
+
+    $server='mysql.2freehosting.com';  // serveri I Databazes
+	$db='u841425275_db';  // Databaza
+	$dbuser='u841425275_user';  // perdorues I Databazes
+	$dbpas='PraktikaDBUnishk';  // paswordi I Databazes
