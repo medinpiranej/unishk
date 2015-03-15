@@ -10,7 +10,14 @@
 ?>
 <div class="content" id="kerko_id" >
 	<div id="divqendror" > 
-	<div id="filtersearchdiv">
+
+       <div class="searchdiv" >
+           
+               <input type="text" name="search" id="search" placeholder="Kerko student ...">
+               <input type="button" name="searchbtn" onclick="kerko()" id="searchbtn" value="Kerko">
+           
+       </div>
+	   	<div id="filtersearchdiv">
 	         <div id="divheaderlabel">
 	          Filtro kerkimin
 	          </div>
@@ -74,14 +81,10 @@
 				  </select>
 	  		</div>
 	  </div>
-       <div class="searchdiv" >
-           <form action="funksioni search" method="post">
-               <input type="text" name="search" id="search" placeholder="Kerko student ...">
-               <input type="button" name="searchbtn" id="searchbtn" value="Kerko">
-           </form>
-       </div>
-	   
-	 
+	 <div id="divi_i_rezultatit" style="display:none;color:black;">
+	 	Po kerkon ...
+	 	
+	 </div>
 	   
 	   
 	   </div>
@@ -96,4 +99,4 @@
 </div>
 </div>
 </div>
-<?php shfaq_footer("<script src='http://code.jquery.com/jquery-latest.min.js' type='text/javascript'></script>"); ?>
+<?php shfaq_footer("<script src='http://code.jquery.com/jquery-2.1.3.min.js' type='text/javascript'></script>"); ?>
