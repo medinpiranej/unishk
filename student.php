@@ -1,11 +1,18 @@
 <?php 
     include 'php/func.php';
-    if(isset($_COOKIE["lg"]))$perd=$_COOKIE["lg"]; // Kontrollojme nqs ndonje perdorues eshte i loguar
-	else $perd=-1;   
-    
+     
+     session_start();
+	 $profili_i_loguar=false; // variabel qe me vone do ta perdorim per te pare nqs profili i hapur eshte i atij qe eshte loguar
+	 
+	 if(isset($_SESSION["perdorues"]))$perd=$_SESSION["perdorues"];
+	 else $perd=-1;
+	 
+	 
     if(!isset($_GET["student"]))header("Location: index.php");// nqs nuk jemi duke kerkuar e redirektojm kete faqe
     $stud_id=$_GET["student"];
     $lidhja=lidhu();
+	
+	if($perd!=-1)if($perd[0]["stud_id"]==$stud_id)$profili_i_loguar=true;// tani jemi duge naviguar ne profilin e atij qe eshte loguar
 	
     $student=exec_query("Select * from student where stud_id=$stud_id", $lidhja);
 	
@@ -15,60 +22,13 @@
 	
 	shfaq_koken_e_faqes($kat,"<link href='css/cssEprofilit.css' rel='stylesheet' type='text/css'>");
   ?>
-<!--<html>   // punim per tu diskutuar ##################
-
-<head>
-<title>Studens Site</title>
-
-
-<link href="css/stile_kryesore.css" rel="stylesheet" type="text/css">
-<link href="css/cssEprofilit.css" rel="stylesheet" type="text/css">
-<script src="js/jquerylib.js"></script>
-<script src="js/skriptiJquery.js" type="text/javascript" ></script>
-</head>
-<body>
-
-<div class="header-container">
-<div class="header" >
-<div class="divlogo">
-students site
-</div>
-<div class="divnav">
-
-
-<ul>
-  <li><a id="butonprofili" href="index.php?login=true&pageid=kycu">Dilni <img id="atagfoto"src="img/def_profile_pic.jpg" alt="foto profili" ></a>
-  <ul id="fotoprofiliUL">
-	   <li><a id="studentnamenav" >emri i loguar</li>
-	   <li><a href="#">Dilni</a></li>
-	   </ul>
-  </li>
-  <li>
-     <a id="tedhenat" href="tedhenat.php?pageid=tedhenat">Te Dhenat</a>
-       
-</li>
-<li>
-<a id="studentet" href="studentet.php?pageid=studentet">Studentet</a>
-<ul>
-	   <li><a href="#">Shkenca Natyrore</a></li>
-	   <li><a href="#">Shkenca Shoqerore</a></li>
-	   </ul>
-</li>
-<li> <a href="tedhenat.php">Profili</a></li>
-</ul>
-    
-</div>
-</div>
-
-</div>
--->
 
 <div class="content" >
   <div class="tedhenatcontainer">
 
   			<div class="leftdiv">
   					<div id="profileheaderlabel">
-					Fotoja e profilit<input type="button" id="ndryshofotobtn" value="Ndrysho foton">
+					Fotoja e profilit<?php if($profili_i_loguar) echo"<input type='button' id='ndryshofotobtn' value='Ndrysho foton'>"; ?>
   					</div>
   					<div id="profpiccont">
   					<img src="img/def_profile_pic.jpg" >
@@ -84,22 +44,22 @@ students site
  			 </div>
   			<div class="rightdiv">
   					<div id="profileheaderlabel">
-  					Te dhenat personale
+  					Te dhenat personale<?php if($profili_i_loguar) echo"<input type='button' id='ndryshofotobtn' value='Ruaj te dhenat'>"; ?>
   					</div>
   					<div id="te_dhenat_personale_div">
-  						<p>Emri i plote<input type="text" class="disablettext" readonly id="emriplote" value=<?php echo "'".$student[0]["emri"]." ".$student[0]["mbiemri"]."'";   ?>"></p>
+  						<p>Emri i plote<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="emriplote" value=<?php echo "'".$student[0]["emri"]." ".$student[0]["mbiemri"]."'";   ?>"></p>
  					 </div>
    					 <div id="te_dhenat_personale_div">
-  					<p>Dega<input type="text" class="disablettext" readonly id="dega" value=<?php echo "'".$student[0]["dega"]."'"; ?>  ></p>
+  					<p>Dega<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="dega" value=<?php echo "'".$student[0]["dega"]."'"; ?>  ></p>
   					</div>
     				<div id="te_dhenat_personale_div">
-  					<p>Adresa<input type="text" class="disablettext"readonly id="adresa" value=<?php echo "'".$student[0]["adresa"]."'"; ?>></p>
+  					<p>Adresa<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value=<?php echo "'".$student[0]["adresa"]."'"; ?>></p>
   					</div>
                     <div id="te_dhenat_personale_div">
-  					<p>Tema e diplomes<input type="text" class="disablettext"readonly id="adresa" value=<?php echo "'".$student[0]["tema_diplomes"]."'"; ?>></p>
+  					<p>Tema e diplomes<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value=<?php echo "'".$student[0]["tema_diplomes"]."'"; ?>></p>
   					</div>
                      <div id="te_dhenat_personale_div">
-  					<p>Datelindja<input type="text" class="disablettext"readonly id="adresa" value="mosha per te plotesu" ></p>
+  					<p>Datelindja<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value="mosha per te plotesu" ></p>
   					</div>
                       <div id="ndryshofjalkalimindiv">
                     <p id="ndryshofjalkalimintext" >Ndrysho fjalkalimin</p>

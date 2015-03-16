@@ -1,6 +1,9 @@
 <?php
      include 'php/func.php';
-     if(isset($_COOKIE["lg"]))$perd=$_COOKIE["lg"]; // Kontrollojme nqs ndonje perdorues eshte i loguar
+	 
+	 session_start();
+	 
+	 if(isset($_SESSION["perdorues"]))$perd=$_SESSION["perdorues"];
 	 else $perd=-1;
 	 
 	 if(isset($_GET['login']))$kat="Login";
@@ -89,14 +92,4 @@
 	   
 	   </div>
     </div><!--fundi i DIV content -->
-    
-<div class='content' style="display: none;" id="login_id">
-<div class='logindivcontainer'><div class='logindiv'><form action='login.php' method='post'>
-<input type='text' name='emri' id='username' placeholder='Emri i perdoruesit '></br><input type='password' name='pas' id='password' placeholder='Fjalkalimi'><br>
-<input type='button' name='forgotpassbtn' id='forgotpassbtn' value='Keni harruar fjalkalimin?'>
-<input type='submit' name='loginbtn' id='loginbtn' value='Hyr'>
-</form>
-</div>
-</div>
-</div>
 <?php shfaq_footer("<script src='http://code.jquery.com/jquery-2.1.3.min.js' type='text/javascript'></script>"); ?>

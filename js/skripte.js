@@ -1,7 +1,3 @@
-function shfaq_login(){
-	$("#kerko_id").slideUp('normal');
-	$("#login_id").slideDown('normal');
-}
 function kerko(){
 	var json,kerko,i;
 	kerko=document.getElementById("search").value;
