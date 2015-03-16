@@ -162,7 +162,7 @@ color:#fff;
 position:absolute;
  text-transform: uppercase;
 z-index:300;
-border:1px solid  #333;
+
 display:none;
 
 top:48px;
@@ -250,19 +250,52 @@ margin-right:auto;
 #filtersearchdiv{
 width:100%;
 
-
-border-top: 4px solid #1b9bff;
 height:100px;
 margin-bottom:20px;
+    margin-top:20px;
 }
 
+#divi_i_rezultatit{
+  
+margin-left:auto;
+    margin-right:auto;
+    width:30px;
+   display:none;
+    color:#000; 
+    
+}
+
+
+
+#kycu{
+    cursor:pointer;
+   display:block;
+
+height:34px;
+
+width:110px;
+
+padding:7px;
+
+text-align:center;
+
+  font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
+
+  color:#FFFFFF;
+
+  font-size: 14px;
+
+  line-height:40px;
+  
+}
 #divheaderlabel{
-	background-color: #333;
+	background-color: #eee;
 	height: 20px;
 	position: relative;
-	font-size: 14px;
+	font-size: 16px;
 	line-height:20px;
-	color: #fff;
+	color: #000;
+    font-weight:bold;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-bottom: 2px;
@@ -297,20 +330,47 @@ margin-bottom:20px;
 	border:1px solid #1b9bff;
 	padding:2px;
 	}
+	.topfilterdiv{
+        display:none;
+    }
+
+.rezdivleft{
+	margin-top:2px;
+	float: left;
+	width: 49%;
+	height: 120px;
+	background-color: #eee;
 	
+	cursor:pointer;
+	border-radius: 3px;
+	margin-right: 5px;
+	margin-left: auto;
+	margin-bottom:3px;
+		line-height: 20px;
+}
+.rezdivleft:hover{
+	
+	background-color: #ccc;
+
+}
+
+#divi_i_rezultatit{
+    
+    padding-left:11px;
+    
+}
+
 .logindivcontainer{
 
 width:50%;
 
-
-
-margin-top:auto;
+margin-top:100px;
 
 margin-left:auto;
 
 margin-right:auto;
 
-margin-bottom:auto;
+margin-bottom:160px;
 
 }
 
@@ -326,7 +386,7 @@ margin-left:auto;
 
 margin-right:auto;
 
-margin-bottom:auto;
+margin-bottom:120;
 
 }
 

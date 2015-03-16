@@ -3,7 +3,7 @@
 	$db='unishk';  // Databaza
 	$dbuser='root';  // perdorues I Databazes
 	$dbpas='';  // paswordi I Databazes
-	function lidhu(){return new PDO('mysql:host=localhost;dbname=unishk', 'root', '');}
+	function lidhu(){return new PDO('mysql:host=localhost;dbname=unishk', 'root1', '');}
     function exec_query($query,$lidhja){$res=$lidhja->prepare($query);$res->execute();return $res->FetchAll();} // Funksion qe ekzekuton dhe kthen rezultatin ne nje assoc array ku indexet jane emrat e kolonave ne mysql psh . arr[nr_rreshti]['emer_kolone']
     function shfaq_koken_e_faqes($kat,$skripte){// kat do ta perdorim si "title" i html dhe $skripte kur dona me perdor skripte shtese si ne rasin e profili.php ku i shtojme nje css
     	?>
@@ -11,6 +11,7 @@
                    <head>
                        <title><?php echo $kat.' | student site';// printojme titullin e faqes ?></title>              
                        <link href='css/stile_kryesore.css' rel='stylesheet' type='text/css'>
+                  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
                        <script src="js/skriptiJquery.js"></script>
                        <script src="js/skripte.js"></script>
                        <?php echo $skripte; // printojme skriptet shtese ?>
@@ -25,7 +26,9 @@ students site
 
 
 <ul>
-<li onclick="shfaq_login()" id="kycu">Kycuni</li><li>
+     <?php if($GLOBALS["perd"]==-1)echo "<li><a href='hyr.php' id='kycu'>Kycuni</a></li>";
+           else echo "<li><a href='student.php?student=".$GLOBALS["perd"][0]['stud_id']."' id='kycu'>". $GLOBALS["perd"][0]['emri']." ".$GLOBALS["perd"][0]['mbiemri'] ."</a><ul><li><a href='dil.php'>Dil !</a></li></ul></li>";  ?>
+<li>
      <a id="informacion"href="index.php?pageid=informacion">Informacion</a>
        <ul>
 	   <li><a id="rrethnesh" href="#">Rreth nesh</a></li>
