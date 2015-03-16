@@ -3,7 +3,7 @@
 	$db='unishk';  // Databaza
 	$dbuser='root';  // perdorues I Databazes
 	$dbpas='';  // paswordi I Databazes
-	function lidhu(){return new PDO('mysql:host=localhost;dbname=unishk', 'root1', '');}
+	function lidhu(){return new PDO('mysql:host=localhost;dbname=unishk', 'root', '');}
     function exec_query($query,$lidhja){$res=$lidhja->prepare($query);$res->execute();return $res->FetchAll();} // Funksion qe ekzekuton dhe kthen rezultatin ne nje assoc array ku indexet jane emrat e kolonave ne mysql psh . arr[nr_rreshti]['emer_kolone']
     function shfaq_koken_e_faqes($kat,$skripte){// kat do ta perdorim si "title" i html dhe $skripte kur dona me perdor skripte shtese si ne rasin e profili.php ku i shtojme nje css
     	?>
@@ -26,7 +26,7 @@ students site
 
 
 <ul>
-     <?php if($GLOBALS["perd"]==-1)echo "<li><a href='hyr.php' id='kycu'>Kycuni</a></li>";
+     <?php if($GLOBALS["perd"]==-1)echo "<li><a href='hyr.php?pageid=kycu' id='kycu'>Kycuni</a></li>";
            else echo "<li><a href='student.php?student=".$GLOBALS["perd"][0]['stud_id']."' id='kycu'>". $GLOBALS["perd"][0]['emri']." ".$GLOBALS["perd"][0]['mbiemri'] ."</a><ul><li><a href='dil.php'>Dil !</a></li></ul></li>";  ?>
 <li>
      <a id="informacion"href="index.php?pageid=informacion">Informacion</a>
