@@ -1,6 +1,8 @@
 <?php
      include 'php/func.php';
+
 	 $kat="Login ";
+
 	 $perd=-1;
 	 shfaq_koken_e_faqes($kat,"");
 ?>

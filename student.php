@@ -28,8 +28,10 @@
 
   			<div class="leftdiv">
   					<div id="profileheaderlabel">
+
 					Fotoja e profilit<?php if($profili_i_loguar){ ?>
                         <input type="button" id="ndryshofotobtn" value="Ndrysho foton"><?php } ?> 
+
   					</div>
   					<div id="profpiccont">
   					<img src="img/def_profile_pic.jpg" >
