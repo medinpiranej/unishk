@@ -94,8 +94,4 @@
 	   
 	   </div>
     </div><!--fundi i DIV content -->
-<<<<<<< HEAD
 <?php shfaq_footer(""); ?>
-=======
-<?php shfaq_footer("<script src='http://code.jquery.com/jquery-2.1.3.min.js' type='text/javascript'></script>"); ?>
->>>>>>> master
