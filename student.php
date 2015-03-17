@@ -28,11 +28,13 @@
 
   			<div class="leftdiv">
   					<div id="profileheaderlabel">
+<
 
 					Fotoja e profilit<?php if($profili_i_loguar){ ?>
                         <input type="button" id="ndryshofotobtn" value="Ndrysho foton"><?php } ?> 
 
   					</div>
+
   					<div id="profpiccont">
   					<img src="img/def_profile_pic.jpg" >
   					</div>
@@ -62,21 +64,20 @@
   					<p>Tema e diplomes<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value=<?php echo "'".$student[0]["tema_diplomes"]."'"; ?>></p>
   					</div>
                      <div id="te_dhenat_personale_div">
-  					<p>Datelindja<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value="mosha per te plotesu" ></p>
+  					<p>Datelindja<input type="date" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value=<?php echo "'".$student[0]["ditelindja"]."'"; ?> ></p>
   					</div>
-                      <div id="ndryshofjalkalimindiv">
-                    <p id="ndryshofjalkalimintext" >Ndrysho fjalkalimin</p>
+                    
+                    <div id="ndryshofjalkalimindiv" >
+                    <p id="ndryshofjalkalimintext" <?php if(!$profili_i_loguar)echo"style='display:none;'"; ?> >Ndrysho fjalkalimin</p>
                     </div>
                      <div id="ndryshofjalkalimindiv2">
-  								
-                    
-                   			 <div id="ndryshofjalkalimin_kutite">
+  							<div id="ndryshofjalkalimin_kutite">
                    				 <p  >Fjalkalimi i vjeter</p>
                     			<input type="password"  id="old_pass">
-                   					 <p  >Fjalkalimi i ri</p>
+                   					 <p>Fjalkalimi i ri</p>
                     			<input type="password"  id="new_pass">
                     			<p  >Kofirmo fjalkalimin e ri</p>
-                   					 <input type="password"  id="confirm_pass">
+                   			    <input type="password"  id="confirm_pass">
                     
                     <input type="button" value="Ruaj"  id="ruaj">
                     <input type="button" value="Anullo"  id="anullo_pass">
