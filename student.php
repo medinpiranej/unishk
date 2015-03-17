@@ -28,8 +28,12 @@
 
   			<div class="leftdiv">
   					<div id="profileheaderlabel">
+<<<<<<< HEAD
 					Fotoja e profilit<?php if($profili_i_loguar){ ?>
                         <input type="button" id="ndryshofotobtn" value="Ndrysho foton"><?php } ?> 
+=======
+					Fotoja e profilit<?php if($profili_i_loguar) echo"<input type='button' id='ndryshofotobtn' value='Ndrysho foton'>"; ?>
+>>>>>>> master
   					</div>
   					<div id="profpiccont">
   					<img src="img/def_profile_pic.jpg" >
