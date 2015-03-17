@@ -94,10 +94,7 @@
 	   
 	   </div>
     </div><!--fundi i DIV content -->
-<<<<<<< HEAD
+
 
 <?php shfaq_footer(""); ?>
 
-=======
-<?php shfaq_footer(""); ?>
->>>>>>> bba318064182a0abc3d35318f51e980452df9ee9
