@@ -28,15 +28,13 @@
 
   			<div class="leftdiv">
   					<div id="profileheaderlabel">
-<<<<<<< HEAD
-<
+
+
 
 					Fotoja e profilit<?php if($profili_i_loguar){ ?>
                         <input type="button" id="ndryshofotobtn" value="Ndrysho foton"><?php } ?> 
 
-=======
-                    Fotoja e profilit<?php if($profili_i_loguar) echo"<input type='button' id='ndryshofotobtn' value='Ndrysho foton'>"; ?>
->>>>>>> f8a5d3d3c8f16544588021255e3b67bd3b2bdae5
+
   					</div>
 
   					<div id="profpiccont">
@@ -88,6 +86,16 @@
                     				</div>
   					</div>
   				</div>
+      
+      <div class="tema_dip_container">
+      <div class="tema_dip_textbox_cont">
+           <p id="tema_dip_text">Tema e Diplomes<input type="text"  <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="tema_dip_textbox" value=<?php echo "'".$student[0]["tema_diplomes"]."'"; ?> ></p>
+          </div>
+     <div class="tema_dip_textbox_cont">
+         <p id="tema_dip_text">Pershkrimi i temes<textarea rows="3"   <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="tema_dip_textbox"  ><?php echo "".ltrim($student[0]["pershkrimi_temes"]).""; ?></textarea></p>
+          </div>
+      
+      </div>
   		</div>
         
 	</div>
