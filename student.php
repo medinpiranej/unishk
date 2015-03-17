@@ -28,12 +28,7 @@
 
   			<div class="leftdiv">
   					<div id="profileheaderlabel">
-<<<<<<< HEAD
-					Fotoja e profilit<?php if($profili_i_loguar){ ?>
-                        <input type="button" id="ndryshofotobtn" value="Ndrysho foton"><?php } ?> 
-=======
-					Fotoja e profilit<?php if($profili_i_loguar) echo"<input type='button' id='ndryshofotobtn' value='Ndrysho foton'>"; ?>
->>>>>>> master
+                    Fotoja e profilit<?php if($profili_i_loguar) echo"<input type='button' id='ndryshofotobtn' value='Ndrysho foton'>"; ?>
   					</div>
   					<div id="profpiccont">
   					<img src="img/def_profile_pic.jpg" >
@@ -64,7 +59,7 @@
   					<p>Tema e diplomes<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value=<?php echo "'".$student[0]["tema_diplomes"]."'"; ?>></p>
   					</div>
                      <div id="te_dhenat_personale_div">
-  					<p>Datelindja<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value="mosha per te plotesu" ></p>
+  					<p>Datelindja<input type="date" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value=<?php echo "'".$student[0]["ditelindja"]."'"; ?> ></p>
   					</div>
                       <div id="ndryshofjalkalimindiv">
                     <p id="ndryshofjalkalimintext" >Ndrysho fjalkalimin</p>
