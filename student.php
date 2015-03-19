@@ -28,8 +28,15 @@
 
   			<div class="leftdiv">
   					<div id="profileheaderlabel">
-					Fotoja e profilit<?php if($profili_i_loguar) echo"<input type='button' id='ndryshofotobtn' value='Ndrysho foton'>"; ?>
-                    </div>
+
+
+
+					Fotoja e profilit<?php if($profili_i_loguar){ ?>
+                        <input type="button" id="ndryshofotobtn" value="Ndrysho foton"><?php } ?> 
+
+
+  					</div>
+
   					<div id="profpiccont">
   					<img src="img/def_profile_pic.jpg" >
   					</div>
@@ -62,8 +69,8 @@
   					<p>Datelindja<input type="date" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value=<?php echo "'".$student[0]["ditelindja"]."'"; ?> ></p>
   					</div>
                     
-                    <div id="ndryshofjalkalimindiv" <?php if(!$profili_i_loguar)echo"style='display:none;'"; ?> >
-                    <p id="ndryshofjalkalimintext" >Ndrysho fjalkalimin</p>
+                    <div id="ndryshofjalkalimindiv" >
+                    <p id="ndryshofjalkalimintext" <?php if(!$profili_i_loguar)echo"style='display:none;'"; ?> >Ndrysho fjalkalimin</p>
                     </div>
                      <div id="ndryshofjalkalimindiv2">
   							<div id="ndryshofjalkalimin_kutite">
@@ -79,6 +86,16 @@
                     				</div>
   					</div>
   				</div>
+      
+      <div class="tema_dip_container">
+      <div class="tema_dip_textbox_cont">
+           <p id="tema_dip_text">Tema e Diplomes<input type="text"  <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="tema_dip_textbox" value=<?php echo "'".$student[0]["tema_diplomes"]."'"; ?> ></p>
+          </div>
+     <div class="tema_dip_textbox_cont">
+         <p id="tema_dip_text">Pershkrimi i temes<textarea rows="3"   <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="tema_dip_textbox"  ><?php echo "".ltrim($student[0]["pershkrimi_temes"]).""; ?></textarea></p>
+          </div>
+      
+      </div>
   		</div>
         
 	</div>

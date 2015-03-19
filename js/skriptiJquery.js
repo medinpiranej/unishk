@@ -50,7 +50,7 @@ $("#ndryshofotobtn").click(function(){
 	$("#ndryshofjalkalimintext").click(function(){
 		
 		$(".rightdiv").animate({
-		height:'475px'
+		height:'455px'
 		});
 		$(this).fadeOut(200);
 		$("#ndryshofjalkalimin_kutite").hide();

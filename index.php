@@ -94,4 +94,6 @@
 	   
 	   </div>
     </div><!--fundi i DIV content -->
+
 <?php shfaq_footer(""); ?>
+
