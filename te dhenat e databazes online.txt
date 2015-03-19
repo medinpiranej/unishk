@@ -3,3 +3,9 @@
 	$db='u841425275_db';  // Databaza
 	$dbuser='u841425275_user';  // perdorues I Databazes
 	$dbpas='PraktikaDBUnishk';  // paswordi I Databazes
+	
+    FTP host	    provaunishk.tk
+    FTP IP	        31.170.166.150
+    FTP Port      	21
+    FTP username	u841425275
+    FTP Pass :      praktika2015!
