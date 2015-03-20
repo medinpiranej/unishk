@@ -36,4 +36,11 @@ function httpGet(theUrl){
     xmlHttp.send( null );
     return xmlHttp.responseText;
 }
+function umor_foto(eventi){
+	if(eventi==1)document.getElementById("upload_pic_path").value=document.getElementById("ngarko").value.replace(/^.*\\/, "");
+	else {
+		document.getElementById("upload_pic_path").value="Zgjidhni nje foto ...";
+		document.getElementById("ngarko").value="";
+	}
+}
 	

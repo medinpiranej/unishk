@@ -23,7 +23,7 @@
 	shfaq_koken_e_faqes($kat,"<link href='css/cssEprofilit.css' rel='stylesheet' type='text/css'>");
   ?>
 
-<div class="content" >
+<div class="content" ><?php if($profili_i_loguar) echo"<form method='post' action='ndrysho_student.php' enctype='multipart/form-data' id='forma_ndryshimit'>";?>
   <div class="tedhenatcontainer">
 
   			<div class="leftdiv">
@@ -32,27 +32,28 @@
 
 
 					Fotoja e profilit<?php if($profili_i_loguar){ ?>
-                        <input type="button" id="ndryshofotobtn" value="Ndrysho foton"><?php } ?> 
+                        <input type='button' id='ndryshofotobtn' value='Ndrysho foton'><?php } ?> 
 
 
   					</div>
 
   					<div id="profpiccont">
-  					<img src="img/def_profile_pic.jpg" >
+  					<img src=<?php echo "'". $student[0]["foto"]."'"; ?> >
   					</div>
   
   					<div id="uploadprofilepic">
  					 <input type="text"  id="upload_pic_path" value="Asnje foto e perzgjedhur .." readonly="true">
- 					 <input type="button"  id="ngarko" value="Ngarko">
-  					<input type="button"   id="anulo" value="Anulo">
+ 					 <input type="file"  id="ngarko" onchange="umor_foto(1)" name="f_profili">
+ 					 <input type="button" onclick="umor_foto(-1)" id="anulo" value="Anulo">
   					</div>
   
   
  			 </div>
   			<div class="rightdiv">
   					<div id="profileheaderlabel">
-  					Te dhenat personale<?php if($profili_i_loguar) echo"<input type='button' id='ndryshofotobtn' value='Ruaj te dhenat'>"; ?>
+  					Te dhenat personale<?php if($profili_i_loguar) echo"<input type='submit' id='ndryshofotobtn' value='Ruaj te dhenat'>"; ?>
   					</div>
+  					<input type="hidden" name="id" value=<?php echo"'".$stud_id."'"; ?>/>
   					<div id="te_dhenat_personale_div">
   						<p>Emri i plote<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="emriplote" value=<?php echo "'".$student[0]["emri"]." ".$student[0]["mbiemri"]."'";   ?>"></p>
  					 </div>
@@ -97,7 +98,7 @@
       
       </div>
   		</div>
-        
+        <?php if($profili_i_loguar) echo"</form>";?>
 	</div>
 
 <div class="footer">
