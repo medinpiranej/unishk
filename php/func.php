@@ -31,7 +31,7 @@ students site
 
      <?php if($GLOBALS["perd"]==-1)echo "<li><a href='hyr.php?pageid=kycu' id='kycu'>Kycuni</a></li>";
 
-           else echo "<li><a href='student.php?student=".$GLOBALS["perd"][0]['stud_id']."' id='kycu'>". $GLOBALS["perd"][0]['emri']." ".$GLOBALS["perd"][0]['mbiemri'] ."</a><ul><li><a href='dil.php'>Dil !</a></li></ul></li>";  ?>
+           else echo "<li><a href='student.php?student=".$GLOBALS["perd"][0]['stud_id']."' id='kycu'>". $GLOBALS["perd"][0]['s_emri']." ".$GLOBALS["perd"][0]['s_mbiemri'] ."</a><ul><li><a href='dil.php'>Dil !</a></li></ul></li>";  ?>
 
 <li>
      <a id="informacion"href="index.php?pageid=informacion">Informacion</a>

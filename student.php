@@ -18,9 +18,16 @@
 	
 	if(empty($student))header("Location: index.php?studenti_nuk_ekziston=true");// nqs studenti nuk ekziston e redirektojm kete faqe
     
-    $kat=$student[0]["emri"]." ".$student[0]["mbiemri"];
+    $kat=$student[0]["s_emri"]." ".$student[0]["s_mbiemri"];
 	
 	shfaq_koken_e_faqes($kat,"<link href='css/cssEprofilit.css' rel='stylesheet' type='text/css'>");
+	                //llogaritet mosha duke u bazuar ne ditelindjen dhe i jepet formati dd-mm-yyyy ditelindjes
+	  				$ditelindja_orig = new DateTime($student[0]["s_ditelindja"]);
+					$ditelindja_formatizuar = $ditelindja_orig->format('d-m-Y');// kthehet ne string ditelindja e formatizuar
+                    $tani = new DateTime();// data aktuale
+                    $mosha = $tani->diff($ditelindja_orig);
+                    //*****************************************************************************************
+	
   ?>
 
 <div class="content" ><?php if($profili_i_loguar) echo"<form method='post' action='ndrysho_student.php' enctype='multipart/form-data' id='forma_ndryshimit'>";?>
@@ -38,7 +45,7 @@
   					</div>
 
   					<div id="profpiccont">
-  					<img src=<?php echo "'". $student[0]["foto"]."'"; ?> >
+  					<img src=<?php echo "'". $student[0]["s_foto"]."'"; ?> >
   					</div>
   
   					<div id="uploadprofilepic">
@@ -55,19 +62,19 @@
   					</div>
   					<input type="hidden" name="id" value=<?php echo"'".$stud_id."'"; ?>/>
   					<div id="te_dhenat_personale_div">
-  						<p>Emri i plote<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="emriplote" value=<?php echo "'".$student[0]["emri"]." ".$student[0]["mbiemri"]."'";   ?>"></p>
+  						<p>Emri i plote<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="emriplote" value=<?php echo "'".$student[0]["s_emri"]." ".$student[0]["s_mbiemri"]."'";   ?>"></p>
  					 </div>
    					 <div id="te_dhenat_personale_div">
-  					<p>Dega<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="dega" value=<?php echo "'".$student[0]["dega"]."'"; ?>  ></p>
+  					<p>Dega<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="dega" value=<?php echo "'".$student[0]["s_dega"]."'"; ?>  ></p>
   					</div>
     				<div id="te_dhenat_personale_div">
-  					<p>Adresa<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value=<?php echo "'".$student[0]["adresa"]."'"; ?>></p>
+  					<p>Adresa<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value=<?php echo "'".$student[0]["s_adr"]."'"; ?>></p>
   					</div>
                     <div id="te_dhenat_personale_div">
-  					<p>Tema e diplomes<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value=<?php echo "'".$student[0]["tema_diplomes"]."'"; ?>></p>
+  					<p>Tema e diplomes<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value='tema'></p>
   					</div>
                      <div id="te_dhenat_personale_div">
-  					<p>Datelindja<input type="date" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value=<?php echo "'".$student[0]["ditelindja"]."'"; ?> ></p>
+  					<p>Datelindja<input type="text" class="disablettext" readonly="true" id="adresa" value=<?php echo "'".$ditelindja_formatizuar." (".$mosha->y." vjec)'"; ?> ></p>
   					</div>
                     
                     <div id="ndryshofjalkalimindiv" >
@@ -90,10 +97,10 @@
       
       <div class="tema_dip_container">
       <div class="tema_dip_textbox_cont">
-           <p id="tema_dip_text">Tema e Diplomes<input type="text"  <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="tema_dip_textbox" value=<?php echo "'".$student[0]["tema_diplomes"]."'"; ?> ></p>
+           <p id="tema_dip_text">Tema e Diplomes<input type="text"  <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="tema_dip_textbox" value="tema" ></p>
           </div>
      <div class="tema_dip_textbox_cont">
-         <p id="tema_dip_text">Pershkrimi i temes<textarea rows="3"   <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="tema_dip_textbox"  ><?php echo "".ltrim($student[0]["pershkrimi_temes"]).""; ?></textarea></p>
+         <p id="tema_dip_text">Pershkrimi i temes<textarea rows="3"   <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="tema_dip_textbox"  >Pershkrimi</textarea></p>
           </div>
       
       </div>

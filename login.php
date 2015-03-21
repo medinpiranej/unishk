@@ -6,9 +6,9 @@ if((!isset($_SESSION["perdorues"]))&&(isset($_POST["email"],$_POST["pas"]))){
    $pas=$_POST["pas"]; // me vone duhet te bejme hashimin dhe skanimin per siguri
    try{
    $lidhja=lidhu();	 
-      $student=exec_query("Select * from student where email='{$email}'", $lidhja);
+      $student=exec_query("Select * from student where s_email='{$email}'", $lidhja);
 	  if(!empty($student)){
-	  	  if($student[0]["pas"]==$pas){
+	  	  if($student[0]["s_pas"]==$pas){
 	  	  	$_SESSION["perdorues"]=$student;
 	  	  	header("location: student.php?student={$student[0]["stud_id"]}");
 		  }else header("Location:index.php?gabim_ne_login=true");
