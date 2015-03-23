@@ -13,7 +13,7 @@
            informacion per rregjistrimin e studentave 
        </div>
     </div>
-<div class='logindivcontainerright'><div class='logindiv'><form action='login.php' method='post'>
+<div class='logindivcontainerright'><div class='logindiv'><form action='kontrollo_hyrjen.php' method='post'>
 
 
 <input type='text' name='email' id='username' placeholder='Email'></br><input type='password' name='pas' id='password' placeholder='Fjalkalimi'><br>

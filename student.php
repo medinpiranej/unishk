@@ -14,12 +14,13 @@
 	
 	if($perd!=-1)if($perd[0]["stud_id"]==$stud_id)$profili_i_loguar=true;// tani jemi duge naviguar ne profilin e atij qe eshte loguar
 	
-    $student=exec_query("Select * from student where stud_id=$stud_id", $lidhja);
-	
+    $student=exec_query("Select * from student join dege on s_dega=d_id join fakultet on d_fakultet=f_id where stud_id=$stud_id", $lidhja);
 	if(empty($student))header("Location: index.php?studenti_nuk_ekziston=true");// nqs studenti nuk ekziston e redirektojm kete faqe
     
     $kat=$student[0]["s_emri"]." ".$student[0]["s_mbiemri"];
-	
+	$tema=exec_query("Select * from tema_diplome where t_id=".$student[0]["stud_id"], $lidhja);
+    if(empty($tema))$tema=-1;
+    
 	shfaq_koken_e_faqes($kat,"<link href='css/cssEprofilit.css' rel='stylesheet' type='text/css'>");
 	                //llogaritet mosha duke u bazuar ne ditelindjen dhe i jepet formati dd-mm-yyyy ditelindjes
 	  				$ditelindja_orig = new DateTime($student[0]["s_ditelindja"]);
@@ -40,32 +41,33 @@
 
 					Fotoja e profilit<?php if($profili_i_loguar){ ?>
                         <input type='button' id='ndryshofotobtn' value='Ndrysho foton'><?php } ?> 
+                    </div>
 
-
-  					</div>
-
-  					<div id="profpiccont">
-  					<img src=<?php echo "'". $student[0]["s_foto"]."'"; ?> >
-  					</div>
-  
-  					<div id="uploadprofilepic">
- 					 <input type="text"  id="upload_pic_path" value="Asnje foto e perzgjedhur .." readonly="true">
- 					 <input type="file"  id="ngarko" onchange="umor_foto(1)" name="f_profili">
- 					 <input type="button" onclick="umor_foto(-1)" id="anulo" value="Anulo">
-  					</div>
+                    <div id="profpiccont">
+                    <img src=<?php echo "'". $student[0]["s_foto"]."'"; ?> >
+                    </div>
+                    <?php if($profili_i_loguar){ ?>
+                    <div id="uploadprofilepic">
+                     <input type="text"  id="upload_pic_path" value="Asnje foto e perzgjedhur .." readonly="true">
+                     <input type="file"  id="ngarko" onchange="umor_foto(1)" name="f_profili">
+                     <input type="button" onclick="umor_foto(-1)" id="anulo" value="Anulo">
+                     <input type="hidden" name="src" value="student">
+                     <input type="hidden" name="s_id" value=<?php echo "'".$student[0]['stud_id']."'"; ?>>
+                     <input type="submit" style="display: none;" id="konfirmo" value="konfirmo">
+                    </div> } <?php } ?> 
   
   
  			 </div>
   			<div class="rightdiv">
   					<div id="profileheaderlabel">
-  					Te dhenat personale<?php if($profili_i_loguar) echo"<input type='submit' id='ndryshofotobtn' value='Ruaj te dhenat'>"; ?>
+  					Te dhenat personale
   					</div>
   					<input type="hidden" name="id" value=<?php echo"'".$stud_id."'"; ?>/>
   					<div id="te_dhenat_personale_div">
   						<p>Emri i plote<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="emriplote" value=<?php echo "'".$student[0]["s_emri"]." ".$student[0]["s_mbiemri"]."'";   ?>"></p>
  					 </div>
    					 <div id="te_dhenat_personale_div">
-  					<p>Dega<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="dega" value=<?php echo "'".$student[0]["s_dega"]."'"; ?>  ></p>
+  					<p>Studion ne :<br><font style="color:black"><?php echo $student[0]["f_emri"]."<br>Dega ".$student[0]["d_emri"]; ?></font></p>
   					</div>
     				<div id="te_dhenat_personale_div">
   					<p>Adresa<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value=<?php echo "'".$student[0]["s_adr"]."'"; ?>></p>
@@ -74,7 +76,7 @@
   					<p>Tema e diplomes<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value='tema'></p>
   					</div>
                      <div id="te_dhenat_personale_div">
-  					<p>Datelindja<input type="text" class="disablettext" readonly="true" id="adresa" value=<?php echo "'".$ditelindja_formatizuar." (".$mosha->y." vjec)'"; ?> ></p>
+  					<p>Datelindja <br><font style="color:black"><?php echo $ditelindja_formatizuar." ( ".$mosha->y." vjec )"; ?></font></p>
   					</div>
                     
                     <div id="ndryshofjalkalimindiv" >
@@ -105,7 +107,8 @@
       
       </div>
   		</div>
-        <?php if($profili_i_loguar) echo"</form>";?>
+       
+        <?php if($profili_i_loguar) echo"</form> <a href='kerko_ndryshim'>ndrysho te dhenat qe nuk aksesohen nga studentat</a><br>";?>
 	</div>
 
 <div class="footer">

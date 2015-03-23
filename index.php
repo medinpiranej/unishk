@@ -19,7 +19,7 @@
        <div class="searchdiv" >
            
                <input type="text" name="search" id="search" placeholder="Kerko student ...">
-               <input type="button" name="searchbtn" onclick="kerko()" id="searchbtn" value="Kerko">
+               <input type="button" name="searchbtn" onclick="kerko(0)" id="searchbtn" value="Kerko">
            
        </div>
 	   	<div id="filtersearchdiv" class="bottomfilterdiv">

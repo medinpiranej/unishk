@@ -3,11 +3,27 @@
      
  
      session_start();
-     if(isset($_SESSION["perdorues"]))$perd=$_SESSION["perdorues"];
-     else header("location: index.php?abuzim_me_te_drejtat=true"); // nqs dikush hyn ne kete faqe i paloguar
-
      $lidhja=lidhu();
-     $perd=exec_query("Select * from student where stud_id=".$perd[0]["stud_id"], $lidhja);//
+    // ndryshimi i fotos se profilit #################################################################
+     //kontrollojem a eshte i loguar klienti qe don me ba nji modifikim foto
+     if(isset($_POST["src"])&&(isset($_POST["s_id"]))){
+         $src=$_POST["src"];
+         if($_POST["src"]=="admin"){
+             if(isset($_SESSION["admin"]))$admin=$_SESSION["admin"];
+             else header("location: index.php?abuzim_me_te_drejtat=true"); 
+             $perd=-1;
+         }else if($_POST["src"]=="student") {
+             if(isset($_SESSION["perdorues"]))$perd=$_SESSION["perdorues"];
+             else header("location: index.php?abuzim_me_te_drejtat=true"); 
+             $admin=-1;
+         }
+              
+     if($perd!=-1)$perd=exec_query("Select * from student where stud_id=".$perd[0]["stud_id"], $lidhja);//
+     else $perd=exec_query("Select * from student where stud_id=".$_POST["s_id"], $lidhja);
+     
+     if(empty($perd))
+        if($src="admin")header("Location: admin.php?gabim_ne_nderrimin_e_fotos=".$_POST["s_id"]);
+        else header("Location: index.php?gabim_ne_nderrimin_e_fotos=".$_POST["s_id"]);
      
      $foto_e_vlefshme=1;
      $dir_e_perd = "perd".$perd[0]["stud_id"]."/foto/";
@@ -28,5 +44,14 @@ if ($foto_e_vlefshme != 0) {
 
     exec_query("update student set s_foto='{$foto_dir}' where `stud_id`=".$perd[0]["stud_id"], $lidhja);
     $_SESSION["perdorues"]=exec_query("Select * from student where stud_id=".$perd[0]["stud_id"], $lidhja);
-    header("location: student.php?student=".$perd[0]["stud_id"]);
+   
+   if($src=="student")header("location: student.php?student=".$perd[0]["stud_id"]);
+   else header("location: admin_student.php?student=".$perd[0]["stud_id"]); 
+   
+    }else header("location: index.php?abuzim_me_te_drejtat=true"); 
+    
+    // ndryshimi i fotos se profilit #################################################################
+         
+         
+
 ?>
