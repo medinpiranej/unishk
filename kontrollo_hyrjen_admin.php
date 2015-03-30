@@ -9,7 +9,8 @@ if((!isset($_SESSION["admin"]))&&(isset($_POST["email"],$_POST["pas"]))){
       $admin=exec_query("Select * from admin where a_email='{$email}'", $lidhja);
       if(!empty($admin)){
           if($admin[0]["a_pas"]==$pas){
-            $_SESSION["admin"]=$admin;
+          	if(isset($_SESSION["perdorues"])){session_destroy();session_start();}// fshijme nqs eshte i loguar si student
+			$_SESSION["admin"]=$admin;
             header("location: admin.php");
           }else header("Location:hyr_admin.php?gabim_ne_login=true");
       }else header("Location:hyr_admin.php?gabim_ne_login=true");
