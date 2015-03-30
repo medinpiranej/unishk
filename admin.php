@@ -4,7 +4,7 @@
      if(isset($_SESSION["admin"]))$admin=$_SESSION["admin"];
      else $admin=-1;
      
-     if($admin==-1)header("location: login_admin.php");
+     if($admin==-1)header("location: hyr_admin.php");
 
      
       $perd=-1;
