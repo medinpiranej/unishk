@@ -90,10 +90,12 @@
         <img src="img/loadingimg.gif" width="100">
         
      </div>
-       <a href="lista_studentave.php">Studentat e mi</a>
+       <input type="button" onclick="shfaq_listen_e_studentave()" value="lista e studentave te mi" />
        <a href="kolege.php">Kolege e mi</a>
        <a href="log.php">log mbi aktivitetin e faqes</a>
-       
+       <div style="display: none" id="divi_listes_se_studentave">
+       	
+       </div>
        </div>
     </div><!--fundi i DIV content -->
 
