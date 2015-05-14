@@ -11,7 +11,6 @@
 	margin-top: 50px;
 	float: right;
 	width: 49%;
-	height: 300px;
 	background-color: #fff;
 	border-bottom: 4px solid #0099FF;
 	border-top: 4px solid #0099Ff;
@@ -19,7 +18,7 @@
 	margin-right: auto;
 	margin-left: 2px;
 
-	margin-bottom:10px;
+	margin-bottom:auto;
 	line-height: 20px;
 }
 .tema_dip_container{
@@ -67,7 +66,6 @@ box-shadow: inset 0px 0px 9px -1px rgba(14,76,117,1);
 	margin-top: 50px;
 	float: left;
 	width: 49%;
-	height: 300px;
 	background-color: #fff;
 	border-bottom: 4px solid #0099FF;
 	border-top: 4px solid #0099Ff;
@@ -91,7 +89,6 @@ box-shadow: inset 0px 0px 9px -1px rgba(14,76,117,1);
 	}
 #ndryshofotobtn{
 	float:right;
-	width:100px;
 	padding:1px 1px;
 	height:20px;
 	margin-top:2px;
@@ -119,7 +116,7 @@ box-shadow: inset 0px 0px 9px -1px rgba(14,76,117,1);
 		}
 		#ndryshofjalkalimin_kutite input{
 			margin:0;
-                            		-webkit-box-shadow: inset 0px 0px 9px -4px rgba(14,76,117,1);
+-webkit-box-shadow: inset 0px 0px 9px -4px rgba(14,76,117,1);
 -moz-box-shadow: inset 0px 0px 9px -4px rgba(14,76,117,1);
 box-shadow: inset 0px 0px 9px -4px rgba(14,76,117,1);
 			}
@@ -158,14 +155,12 @@ box-shadow: inset 0px 0px 9px -4px rgba(14,76,117,1);
 #profpiccont{
 	
 	width: 275px;
-	height:275px;
 	margin-left: auto;
 	margin-right: auto;
 	display: compact;
 	}
-	#profpiccont img{
-	width:270px;
-	height:100%;
+#profpiccont img{
+	width:100%;
 	
 	}
 #atagfoto{
@@ -182,48 +177,31 @@ padding-top:5px;
 	line-height:48px;
 	height:37px;
 	}
-	#fotoprofiliUL{
+#fotoprofiliUL{
 		margin-left:-25px;
 		float:left;
 		
 		}
-		#fotoprofiliUL li{
+#fotoprofiliUL li{
 		padding:0px;
 		
 		}
-		#fotoprofiliUL li a{
+#fotoprofiliUL li a{
 		height:25px;
 		line-height:25px;
 		
 		}
-	#te_dhenat_personale_div{
-	width:300px;
-	height:35px;
-		
-		margin:auto;
-		
+#te_dhenat_personale_div{
+	    width:300px;
+	    margin-bottom: -10px;
 		}
-		#te_dhenat_personale_div p{
+#te_dhenat_personale_div p{
 	font-size: 14px;
 	font-weight: bold;
 	color:#0099ff;
-			
-			}
-	#te_dhenat_personale_div input[class=disablettext]{
-	width:100%;
-	padding:4px;
-	border-radius:3px;
-	font-size: 14px;
-	font-weight: bold;
-	color:#000;
-			border:0px;
-        -webkit-box-shadow: inset 0px 0px 9px -4px rgba(14,76,117,1);
--moz-box-shadow: inset 0px 0px 9px -4px rgba(14,76,117,1);
-box-shadow: inset 0px 0px 9px -4px rgba(14,76,117,1);
-			}
+	}
 #uploadprofilepic{
 	display:none;
-	margin-top:15px;
 	}
 			
 #upload_pic_path{
@@ -234,14 +212,12 @@ box-shadow: inset 0px 0px 9px -4px rgba(14,76,117,1);
 	font-size: 13px;
 	font-weight: bold;
 	color:#333;
-			border:0px;
-	
+	border:0px;
 	}
 	input[id=ngarko],input[id=anulo]{
-		
 	width:70px;
 	padding:1px 1px;
 	height:20px;
 	margin-top:2px;
 	margin-bottom:2px;
-		}
+	}

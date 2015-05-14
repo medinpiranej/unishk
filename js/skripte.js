@@ -1,3 +1,26 @@
+var shfaq_div_ndrysho_foto_profili_hapur=false;
+var cv_hapur=false; 
+function hap_mbyll_cv(){
+	if(cv_hapur){
+				$(".cv_div").slideUp('normal');
+				document.getElementById('but_hap_cv').value='Hap CV e studentit';
+				cv_hapur=false;
+		}else{
+				$(".cv_div").slideDown('normal');
+				document.getElementById('but_hap_cv').value='Mbyll CV e studentit';
+				
+				cv_hapur=true;
+		}
+}
+function shfaq_div_ndrysho_foto_profili(){
+	if(shfaq_div_ndrysho_foto_profili_hapur){
+				$("#uploadprofilepic").slideUp('normal');
+				shfaq_div_ndrysho_foto_profili_hapur=false;
+		}else{
+				$("#uploadprofilepic").slideDown('normal');
+				shfaq_div_ndrysho_foto_profili_hapur=true;
+		}
+}
 function kerko(tipi_output){
 	var json,kerko,i;
 	kerko=document.getElementById("search").value;
@@ -45,6 +68,7 @@ function umor_foto(eventi){
 	else {
 		document.getElementById("upload_pic_path").value="Zgjidhni nje foto ...";
 		document.getElementById("ngarko").value="";
+		shfaq_div_ndrysho_foto_profili();
 	}
 }
 function shfaq_listen_e_studentave(){

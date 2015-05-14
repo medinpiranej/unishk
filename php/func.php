@@ -36,15 +36,15 @@ students site
 <li>
      <a id="informacion"href="index.php?pageid=informacion">Informacion</a>
        <ul>
-	   <li><a id="rrethnesh" href="#">Rreth nesh</a></li>
+	   <li><a id="rrethnesh" href="rrethnesh.php">Rreth nesh</a></li>
 	   <li><a id="kontakt" href="#">Kontakt</a></li>
 	   </ul>
 </li>
 <li>
 <a id="studentet" href="studentet.php?pageid=studentet">Studentet</a>
 <ul>
-	   <li><a id="shkencanatyrore" href="#">Shkenca Natyrore</a></li>
-	   <li><a id="shkencashoqerore"href="#">Shkenca Shoqerore</a></li>
+	   <li><a id="shkencanatyrore" href="#">Informatik</a></li>
+	   <li><a id="shkencashoqerore"href="#">Bio-Kimi</a></li>
 	   </ul>
 </li><li>
 <a id="faqjakryesore" href="index.php">Faqja Kryesore</a></li>

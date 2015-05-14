@@ -68,7 +68,8 @@
              </div>
             <div class="rightdiv">
                     <div id="profileheaderlabel">
-                    Te dhenat personale
+                    Te dhenat personale<?php if($kam_akses_ne_profil){ ?>
+                        <input type='button' id='ndryshofotobtn' value='Ndrysho te dhenat personale'><?php } ?> 
                     </div>
                     <input type="hidden" name="id" value=<?php echo"'".$stud_id."'"; ?>/>
                     <div id="te_dhenat_personale_div">

@@ -40,20 +40,20 @@
 
 
 					Fotoja e profilit<?php if($profili_i_loguar){ ?>
-                        <input type='button' id='ndryshofotobtn' value='Ndrysho foton'><?php } ?> 
+                        <input type='button' id='ndryshofotobtn' onclick="shfaq_div_ndrysho_foto_profili()" value='Ndrysho foton'><?php } ?> 
                     </div>
 
                     <div id="profpiccont">
                     <img src=<?php echo "'". $student[0]["s_foto"]."'"; ?> >
                     </div>
                     <?php if($profili_i_loguar){ ?>
-                    <div id="uploadprofilepic">
+                    <div id="uploadprofilepic" align="middle">
                      <input type="text"  id="upload_pic_path" value="Asnje foto e perzgjedhur .." readonly="true">
                      <input type="file"  id="ngarko" onchange="umor_foto(1)" name="f_profili">
                      <input type="button" onclick="umor_foto(-1)" id="anulo" value="Anulo">
                      <input type="hidden" name="src" value="student">
                      <input type="hidden" name="s_id" value=<?php echo "'".$student[0]['stud_id']."'"; ?>>
-                     <input type="submit" style="display: none;" id="konfirmo" value="konfirmo">
+                     <input type="submit" style="display: none;width: 60%;color:white;background-color: #207cca;" id="konfirmo" value="konfirmo">
                     </div> } <?php } ?> 
   
   
@@ -64,16 +64,16 @@
   					</div>
   					<input type="hidden" name="id" value=<?php echo"'".$stud_id."'"; ?>/>
   					<div id="te_dhenat_personale_div">
-  						<p>Emri i plote<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="emriplote" value=<?php echo "'".$student[0]["s_emri"]." ".$student[0]["s_mbiemri"]."'";   ?>"></p>
+  						<p>Emri i plote<br><font style="color:black"><?php echo $student[0]["s_emri"]." ".$student[0]["s_mbiemri"];   ?></font></p>
  					 </div>
    					 <div id="te_dhenat_personale_div">
   					<p>Studion ne :<br><font style="color:black"><?php echo $student[0]["f_emri"]."<br>Dega ".$student[0]["d_emri"]; ?></font></p>
   					</div>
     				<div id="te_dhenat_personale_div">
-  					<p>Adresa<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value=<?php echo "'".$student[0]["s_adr"]."'"; ?>></p>
+  					<p>Adresa<br><font style="color:black"><?php echo $student[0]["s_adr"]; ?>></font></p>
   					</div>
                     <div id="te_dhenat_personale_div">
-  					<p>Tema e diplomes<input type="text" class="disablettext" <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="adresa" value='tema'></p>
+  					<p>Tema e diplomes<br><font style="color:black">tema</font></p>
   					</div>
                      <div id="te_dhenat_personale_div">
   					<p>Datelindja <br><font style="color:black"><?php echo $ditelindja_formatizuar." ( ".$mosha->y." vjec )"; ?></font></p>
@@ -96,24 +96,24 @@
                     				</div>
   					</div>
   				</div>
-      
-      <div class="tema_dip_container">
-      <div class="tema_dip_textbox_cont">
-           <p id="tema_dip_text">Tema e Diplomes<input type="text"  <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="tema_dip_textbox" value="tema" ></p>
-          </div>
-     <div class="tema_dip_textbox_cont">
-         <p id="tema_dip_text">Pershkrimi i temes<textarea rows="3"   <?php if(!$profili_i_loguar)echo"readonly='true'"; ?> id="tema_dip_textbox"  >Pershkrimi</textarea></p>
-          </div>
-      
       </div>
-  		</div>
+      <div class="tema_cv" id="cv_tema">
+      	  <div class="but_tema_cv" align="middle">
+      	  <input type="button" value="hap temen e diplomes" />
+      	  <input type="button" value="hap CV e studentit" id='but_hap_cv' onclick="hap_mbyll_cv()" />
+      	  </div>
+      <div class="cv_div" align="middle" style="display: none;">
+      	<input type="button" value="ngarko ne cv te re" />
+      	<iframe   width="95%" src="perd1/cv.pdf" height="100%"></iframe>
+  	  </div>
        
+      </div>
         <?php if($profili_i_loguar) echo"</form> <a href='kerko_ndryshim'>ndrysho te dhenat qe nuk aksesohen nga studentat</a><br>";?>
 	</div>
 
 <div class="footer">
 
-<div class="copyrightdiv">
+<div  class="copyrightdiv">
 
 <h5>Copyright( M.Piranej , M.Curoviq ,B.Bajraktari ) 2015</h5>
 </div>

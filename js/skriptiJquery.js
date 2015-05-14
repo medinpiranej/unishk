@@ -1,6 +1,5 @@
 
 $(document).ready(function () {
-    
  
     // Read a page's GET URL variables and return them as an associative array.
 function getUrlVars()
@@ -26,27 +25,7 @@ if (pageID != null ){
 	var emerstudenti="student";
 	$('#butonprofili').html(emerstudenti +"<img id='atagfoto'src='img/def_profile_pic.jpg' alt='foto profili' >");
 
-//funksion per shfaqjen e butonit ngarko dhe anullo kur klikohet buttoni ndrysho foton
-$("#ndryshofotobtn").click(function(){
-	var currenth = $(".leftdiv").height();
-	if(currenth < 350){
-	$(".leftdiv").animate({
-		height:'350px'
-		});
-		
-		$("#uploadprofilepic").css('display','inline-block');
-		$("#uploadprofilepic").fadeIn(slow);
-		}
-		else if (currenth = 350){
-			$("#uploadprofilepic").fadeToggle(300);
-			$(".leftdiv").animate({
-		height:'300px'
-		});
-		
-			}
-	
-	});
-	
+
 	$("#ndryshofjalkalimintext").click(function(){
 		
 		$(".rightdiv").animate({
@@ -69,13 +48,6 @@ $("#ndryshofotobtn").click(function(){
 		$("#ndryshofjalkalimintext").fadeIn(300);
 		});
 	
-	$("#anulo").click(function(){
-		
-		$("#uploadprofilepic").fadeToggle(300);
-			$(".leftdiv").animate({
-		height:'300px'
-		
-		});
-	});
+	
 	
 });

@@ -1,246 +1,144 @@
 .header-container{
-
    position:fixed;
-
 left:0px;
-
 top:0px;
-
 height:44px;
-
 width:100%;
-
 background-color:#333333;
 border-bottom: 4px solid #1b9bff;
 -webkit-box-shadow: 0px 3px 30px -11px rgba(8,21,61,1);
-
 -moz-box-shadow: 0px 3px 30px -11px rgba(8,21,61,1);
-
 box-shadow: 0px 3px 30px -11px rgba(8,21,61,1);
-
 z-index:999;
-
 }
-
 
 
 .header{
-
 height:44px;
-
-
-
 width:960px;
-
-
-
 margin-left:auto;
-
 margin-right:auto;
-
-
-
 padding-left:10px;
-
-
-
 }
-
 .divnav {
-
 margin:0;
-
 padding:0;
-
 float:right;
-
 width:70%;
-
 }
-
 .divlogo{
-
 width:30%;
-
 float:left;
-
-
-
 }
-
-
-
 .divnav ul {
-
 margin:0;
-
 padding:0;
-
 position:relative;
-
 list-style-type:none;
-
  text-transform: uppercase;
-
 }
 
 .divnav ul li{
-
 float:right;
-
 position:relative;
-
 list-style-type:none;
-
 }
-
 .divnav ul li:hover{
-
 background-color:#1b9bff;
-
 }
 
 .divnav ul li a,visited{
-
 color:#0099FF;
-
 }
-
 .divnav ul li:hover ul{
-
 display:block;
-
 }
-
  .divnav ul li a {
-
 display:block;
-
 height:34px;
-
-width:110px;
-
 padding:7px;
-
 text-align:center;
-
   font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
-
   color:#FFFFFF;
-
   font-size: 14px;
-
   text-decoration: none;
-
   line-height:40px;
-
 }
-
 .divnav ul li a:hover {
-
 color:#fff;
-
-
 }
-
 .divnav ul li ul li:hover{
-
 background-color:#1b9bff;
-
 }
-
 .divnav ul li ul li a:hover{
-
 background-color:#333;
-
 color:#fff;
-
+}
+.post_mrena{
+	display: inline-block;
+	float: left;
+}
+.post{
+	display: inline-block;
+	float: left;
+	margin-top:50px;
+	margin-left:50px;
+	margin-right:50px;
+	
+}
+.emri{
+	color:#000000;
+	font-weight: bold;
+}
+.pershkrimi{
+	color:#000000;
+	
 }
 
+.divi_pershkrimi{
+	padding-left:20px;
+}
 .divnav ul ul {
-
 position:absolute;
  text-transform: uppercase;
 z-index:300;
-
 display:none;
-
 top:48px;
-
 background-color:#1b9bff;
-
 color:#006699;
-
 -webkit-box-shadow: 0px 3px 30px -11px rgba(8,21,61,1);
-
 -moz-box-shadow: 0px 3px 30px -11px rgba(8,21,61,1);
-
 box-shadow: 0px 3px 30px -11px rgba(8,21,61,1);
-
 border-top:0;
-
-
-
-
-
 }
-
 .divnav ul ul li a{
-
 color:#fff;
-
 width:140px;
-
 padding:5px;
-
 line-height:35px;
-
 }
-
 .searchdiv{
-
 width:100%;
 padding-left:7px;
 margin-left:auto;
-
 margin-right:auto;
-
-
-
 }
-
 #search {
-
  padding:8px 15px;
-
  background:#F8F8F8 ;
-
  border:1px solid #207cca;
-
  width:80.2%;
-
  border-radius:2px;
-
 }
-
 #searchbtn{
-
                 position:relative;
-
                 padding:7px 15px;
-
                 left:-10px;
-
                 border:2px solid #207cca;
-
                 background-color:#207cca;
-
                 color:#fafafa;
-
 				width:18.5%;
-
 				border-radius:2px;
-
 }
 
 #searchbtn:hover{
@@ -249,12 +147,10 @@ margin-right:auto;
 }
 #filtersearchdiv{
 width:100%;
-
 height:100px;
 margin-bottom:20px;
     margin-top:20px;
 }
-
 #divi_i_rezultatit{
  position:relative;
  width:110px;
@@ -272,8 +168,7 @@ margin-bottom:30px;
    float:left; 
   width:100px;
     height:100%;
-   padding: 10px;
-   
+   padding: 10px;  
 }
 #div_rez_foto img{
    border-radius: 10px;
@@ -282,84 +177,49 @@ margin-bottom:30px;
     vertical-align:bottom;
 }
 #div_rez_emer{
-    
     font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
-
 	font-size:24px;
-
 	font-style: normal;
-
 	font-variant: normal;
-
 	font-weight:bold;
 padding:3px;
     margin:17px auto;
 	line-height: 0px;
-
 	color:#1b9bff;
-
-    
 }
 #div_rez_dega{
       font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
-
 	font-size:14px;
-
 	font-style: normal;
-
 	font-variant: normal;
-
 	font-weight:bold;
 padding:3px;
     margin:5px auto;
 	line-height: 10px;
-
 	color:#666;
-    
-    
 }
 #div_rez_adresa{
       font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
-
 	font-size:14px;
-
 	font-style: normal;
-
 	font-variant: normal;
-
 	font-weight:bold;
 padding:3px;
     margin:5px auto;
 	line-height: 10px;
-
-	color:#666;
-    
-    
+	color:#666;   
 }
-
-
-
 #kycu{
     cursor:pointer;
    display:block;
-
 height:34px;
-
 width:110px;
-
 padding:7px;
-
 text-align:center;
-
   font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
-
   color:#FFFFFF;
-
   font-size: 14px;
-
-  line-height:40px;
-  
-}
+  line-height:40px;}
 #divheaderlabel{
 	background-color: #eee;
 	height: 20px;
@@ -371,11 +231,8 @@ text-align:center;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-bottom: 2px;
-	
-	
 	}
 	#divheaderlabelgray{
-
 	height: 16px;
 	position: relative;
 	font-size: 14px;
@@ -386,16 +243,12 @@ text-align:center;
 	padding-right: 10px;
 	padding-bottom: 5px;
 	margin-bottom:8px;
-	
-	
 	}
 	#filteritemdiv{
 	width:19.2%;
 	float:left;
 	padding:3px;
-	
 	display:block;
-	
 	}
 	#combobox{
 	width:100%;
@@ -421,15 +274,9 @@ text-align:center;
 		line-height: 20px;
 }
 .rezdivleft:hover{
-	
 	background-color: #E8E8E8  ;
-
 }
-
-
-
 .logindivcontainerright{
-
 width:50%;
 float:right;
 margin-top:50px;
