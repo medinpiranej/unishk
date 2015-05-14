@@ -15,7 +15,7 @@
 Zona admin
    <div class='logindivcontainerleft'>
        <div class='logindivinfo'>
-           informacion per rregjistrimin e administeratoreve dhe stafit te unishk
+           informacion per rregjistrimin e administeratoreve dhe stafit te unishk pe medines
        </div>
     </div>
 <div class='logindivcontainerright'><div class='logindiv'><form action='kontrollo_hyrjen_admin.php' method='post'>
