@@ -18,7 +18,7 @@
         </div>
        <div class="searchdiv" >
            
-               <input type="text" name="search" id="search" placeholder="Kerko student ...">
+               <input type="text" name="search" id="search" placeholder="Kerko studentat ne baze te emrit ose perdor filtrimet e meposhtme ...">
                <input type="button" name="searchbtn" onclick="kerko(0)" id="searchbtn" value="Kerko">
     
        </div>
@@ -31,7 +31,8 @@
 	                Dega
 	               </div>
 	               <select id="combobox">
-                    <option value="informatike" selected="selected">Informatike</option>
+	               	
+                    <option value="informatike" selected="selected" >Informatike</option>
                    <option value="matematike">Matematike</option>
                    <option value="fizike">Fizike</option>
                    <option value="letersi">Letersi</option>
@@ -52,6 +53,7 @@
 	 			 </div>
 				   <select id="combobox">
                  <option value="shkoder" selected="selected">Shkoder</option>
+                 <option value="ulqin">Ulqin</option>
                   <option value="lezhe">Lezhe</option>
 				  <option value="tirane">Tirane</option>
 				  <option value="durres">Durres</option>
@@ -71,7 +73,9 @@
 				  <option value="23">23</option>
 				  <option value="24">24</option>
 				  <option value="25">25</option>
-				  <option value="26">27</option>
+				  <option value="26">26</option>
+				  <option value="28">27</option>
+				  <option value="28">28</option>
 				  
                  </select>
 	  		</div>

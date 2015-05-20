@@ -8,7 +8,7 @@
      else header("Location: index.php?abuzim_me_te_drejtat=true");
      
      
-    //if(!isset($_GET["student"]))shfaq listen_e studentave qe mund te modifikosh
+    //if(!isset($_GET["student"]))shfaq listen_e studentave qe mund te modifikosh   gthyujik
     $stud_id=$_GET["student"];
     $lidhja=lidhu();
     

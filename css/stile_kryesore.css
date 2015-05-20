@@ -1,3 +1,16 @@
+.menu_ndrysho_container{
+	width: 300px;
+	height: 100%;
+	position: fixed;
+	right:-300px;
+	overflow:scroll;
+	top:43px;
+	background-color: #F0F0F0;
+    box-shadow: 3px 3px 30px 0 rgba(8,21,61,1);
+}
+
+
+
 .header-container{
    position:fixed;
 left:0px;
@@ -87,12 +100,12 @@ color:#fff;
 	
 }
 .emri{
-	color:#000000;
+	color:#006699;
 	font-weight: bold;
 }
 .pershkrimi{
 	color:#000000;
-	
+	font-size: 20px;
 }
 
 .divi_pershkrimi{

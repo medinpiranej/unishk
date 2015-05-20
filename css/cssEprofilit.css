@@ -1,4 +1,5 @@
 .tedhenatcontainer{
+	margin-top:50px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 80%;
@@ -6,18 +7,65 @@
 	padding-left:10px;
 
 	}
-
+.te_dhenat_men_djathtas{
+	color: white;
+	font-weight:bold;
+	font-size: 18px; 
+}
+.te_dhenat_men_djathtas input{
+	width: 100%;
+	height: 30px;
+	color: black;
+}
+.menu_tituj{
+	width:100%;
+	margin-top:-20px;
+	font-size: 16px;
+	font-weight: bold;
+	color:#0099ff;
+}
+.menu_tituj input{
+	width: 190px;
+	height: 30px;
+	font-weight: bold;
+	font-size: 16px;
+	border:2px solid #0099ff;
+	margin-top:15px;
+	padding-left:5px;
+	padding-right:5px;
+	margin-bottom:15px;
+	transition: all 1s;
+}
+.menu_tituj input:hover{
+	box-shadow:0px 0px 5px 0px rgba(20, 51, 255, 1);
+	transition: all 1s;
+}
+.menu_tituj input:focus{
+	box-shadow:0px 0px 10px 0px rgba(20, 51, 255, 1);
+	transition: all 1s;
+}
+#pershkrim_teme_div{
+	font-weight: bold;
+	font-size:22px;
+	color:#1B9BFF;
+	margin-left:40px;
+	margin-right:40px;
+	margin-top:20px;
+    line-height: 1.5;
+}
+#pershkrim_teme_div font{
+	color:black;font-size:16px;margin-left:30px;
+}
 .rightdiv{
-	margin-top: 50px;
 	float: right;
 	width: 49%;
 	background-color: #fff;
+	padding-bottom:4px;
 	border-bottom: 4px solid #0099FF;
 	border-top: 4px solid #0099Ff;
 	border-radius: 5px;
 	margin-right: auto;
 	margin-left: 2px;
-
 	margin-bottom:auto;
 	line-height: 20px;
 }
@@ -63,9 +111,9 @@ box-shadow: inset 0px 0px 9px -1px rgba(14,76,117,1);
     line-height:25px; 
 }
 .leftdiv{
-	margin-top: 50px;
 	float: left;
 	width: 49%;
+    padding-bottom:10px;
 	background-color: #fff;
 	border-bottom: 4px solid #0099FF;
 	border-top: 4px solid #0099Ff;
@@ -110,7 +158,6 @@ box-shadow: inset 0px 0px 9px -1px rgba(14,76,117,1);
 		}
 		#ndryshofjalkalimindiv{
 		width:300px;
-	height:19px;
 	line-height:17px;
 		margin:auto;
 		}
@@ -121,12 +168,11 @@ box-shadow: inset 0px 0px 9px -1px rgba(14,76,117,1);
 box-shadow: inset 0px 0px 9px -4px rgba(14,76,117,1);
 			}
 			#ndryshofjalkalimin_kutite {
-			display:none;
 
 			}
 		#ndryshofjalkalimin_kutite input[type=button]{
-			width:60px;
-			height:20px;
+			width:90px;
+			height:23px;
 			margin:1;
 			padding:2;
 			line-height:10px;
@@ -141,12 +187,6 @@ box-shadow: inset 0px 0px 9px -4px rgba(14,76,117,1);
 	padding:0;
 			
 			}
-	#ndryshofjalkalimindiv2 {
-			width:205px;
-			margin-left:auto;
-			margin-right:auto;
-
-		}
 #old_pass,#new_pass,#confirm_pass{
 	width:200px;
 	padding: 3px 10px;
@@ -192,7 +232,6 @@ padding-top:5px;
 		
 		}
 #te_dhenat_personale_div{
-	    width:300px;
 	    margin-bottom: -10px;
 		}
 #te_dhenat_personale_div p{
@@ -206,7 +245,7 @@ padding-top:5px;
 			
 #upload_pic_path{
 	margin-left:10px;
-    width:200px;
+    width:190px;
 	padding:4px;
 	border-radius:3px;
 	font-size: 13px;
@@ -215,7 +254,6 @@ padding-top:5px;
 	border:0px;
 	}
 	input[id=ngarko],input[id=anulo]{
-	width:70px;
 	padding:1px 1px;
 	height:20px;
 	margin-top:2px;

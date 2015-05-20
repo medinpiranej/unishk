@@ -12,7 +12,6 @@
                        <title><?php echo $kat.' | student site';// printojme titullin e faqes ?></title>              
                        <link href='css/stile_kryesore.css' rel='stylesheet' type='text/css'>
                   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-                       <script src="js/skriptiJquery.js"></script>
                        <script src="js/skripte.js"></script>
                        <?php echo $skripte; // printojme skriptet shtese ?>
                    </head>
