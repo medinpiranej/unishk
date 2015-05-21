@@ -108,6 +108,7 @@ function kerko(tipi_output){
 	kerko=document.getElementById("search").value;
     var cont =$(".bottomfilterdiv").html();
     
+    document.getElementById("divi_i_rezultatit").style.display="inline-block";
     $(".topfilterdiv").css('display','inline-block');
 	$(".topfilterdiv").html(cont);
      $(".bottomfilterdiv").hide();
@@ -120,7 +121,6 @@ function kerko(tipi_output){
     json=JSON.parse(httpGet("kerko.php?kerko="+kerko));
     i=0;
     document.getElementById("divi_i_rezultatit").innerHTML="";//fshijem divin
-    document.getElementById("divi_i_rezultatit").style.display="inline-block";
    $("#divi_i_rezultatit").css("width","100%");
     if(json[0][0]!=undefined)//kontrollojme nese kemi ndonje rezultat
 	while(json[i]!=undefined){ // printojme rezultatet 
