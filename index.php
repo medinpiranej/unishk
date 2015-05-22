@@ -9,6 +9,9 @@
 	 if(isset($_GET['login']))$kat="Login";
 	 else $kat="Miresevini";
 	 
+	 
+	 if(isset($_SESSION["admin"]))header("location: admin.php");
+	 
 	 shfaq_koken_e_faqes($kat,"");
 ?>
 <div class="content" id="kerko_id" >

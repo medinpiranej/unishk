@@ -12,6 +12,9 @@
 	 
     if(!isset($_GET["student"]))header("Location: index.php");// nqs nuk jemi duke kerkuar e redirektojm kete faqe
     $stud_id=$_GET["student"];
+	
+	if(isset($_SESSION["admin"]))header("location: admin_student.php?student=".$stud_id);
+	
     $lidhja=lidhu();
 	
 	if($perd!=-1)if($perd[0]["stud_id"]==$stud_id)$profili_i_loguar=true;// tani jemi duge naviguar ne profilin e atij qe eshte loguar
@@ -69,7 +72,6 @@
   					<div id="profileheaderlabel">
   					Te dhenat personale
   					</div>
-  					<input type="hidden" name="id" value=<?php echo"'".$stud_id."'"; ?>/>
   					<div id="te_dhenat_personale_div">
   						<?php if($profili_i_loguar){ ?>
   						<img align="right" style="margin-top: -10px;" id="img_men_ndrysho" src="img/ndrysho.png" width="50px" height="50px" onclick="shfaq_menu_djathtas()"  />
@@ -191,7 +193,6 @@
 <h5>Copyright( M.Piranej , M.Curoviq ,B.Bajraktari ) 2015</h5>
 </div>
 </div>
-
 
 
 </body>
