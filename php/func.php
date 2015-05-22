@@ -11,7 +11,7 @@
                    <head>
                        <title><?php echo $kat.' | student site';// printojme titullin e faqes ?></title>              
                        <link href='css/stile_kryesore.css' rel='stylesheet' type='text/css'>
-                  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+                       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
                        <script src="js/skripte.js"></script>
                        <?php echo $skripte; // printojme skriptet shtese ?>
                    </head>
@@ -28,8 +28,7 @@ students site
 
 
 
-     <?php if($GLOBALS["perd"]==-1)echo "<li><a href='hyr.php?pageid=kycu' id='kycu'>Kycuni</a></li>";
-
+     <?php if(($GLOBALS["perd"]==-1)&&($GLOBALS["admin"]==-1))echo "<li><a href='hyr.php?pageid=kycu' id='kycu'>Kycuni</a></li>";
            else echo "<li><a href='student.php?student=".$GLOBALS["perd"][0]['stud_id']."' id='kycu'>". $GLOBALS["perd"][0]['s_emri']." ".$GLOBALS["perd"][0]['s_mbiemri'] ."</a><ul><li><a href='dil.php'>Dil !</a></li></ul></li>";  ?>
 
 <li>

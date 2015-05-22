@@ -2,7 +2,7 @@
      include 'php/func.php';
 
 	 $kat="Login ";
-
+     $admin=-1;
 	 $perd=-1;
 	 shfaq_koken_e_faqes($kat,"");
 ?>

@@ -7,6 +7,8 @@
 	 if(isset($_SESSION["perdorues"]))$perd=$_SESSION["perdorues"];
 	 else $perd=-1;
 	 
+	 $admin=-1;
+	 
 	 
     if(!isset($_GET["student"]))header("Location: index.php");// nqs nuk jemi duke kerkuar e redirektojm kete faqe
     $stud_id=$_GET["student"];

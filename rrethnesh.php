@@ -5,7 +5,7 @@
 	 
 	 if(isset($_SESSION["perdorues"]))$perd=$_SESSION["perdorues"];
 	 else $perd=-1;
-	 
+	 $admin=-1;
 	 if(isset($_GET['login']))$kat="Login";
 	 else $kat="Miresevini";
 	 

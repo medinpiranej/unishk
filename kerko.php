@@ -2,7 +2,7 @@
      include 'php/func.php';
      if(isset($_GET["kerko"]))$kerkim=$_GET["kerko"];
 	 else $kerkim=-1;
-	 
+	 $admin=-1;
 	 $lidhja=lidhu();
      if ($kerkim!=-1)$fjale=explode(" ",$kerkim);
      else $fjale=array("");

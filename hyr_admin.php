@@ -12,13 +12,13 @@
      shfaq_koken_e_faqes($kat,"");// te krijohet koka e faqes per adminat #########
 ?>
 <div class='content' id="login_id">
-Zona admin
-   <div class='logindivcontainerleft'>
+<h3 style="color:#000000" align="middle">Zona admin</h2>
+   <div style="margin-top: 0px;"  class='logindivcontainerleft'>
        <div class='logindivinfo'>
            informacion per rregjistrimin e administeratoreve dhe stafit te unishk
        </div>
     </div>
-<div class='logindivcontainerright'><div class='logindiv'><form action='kontrollo_hyrjen_admin.php' method='post'>
+<div class='logindivcontainerright' style="margin-top: 0px;" ><div class='logindiv'><form action='kontrollo_hyrjen_admin.php' method='post'>
 
 
 <input type='text' name='email' id='username' placeholder='Email'></br><input type='password' name='pas' id='password' placeholder='Fjalkalimi'><br>
