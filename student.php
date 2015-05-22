@@ -164,7 +164,7 @@
 <div class="menu_ndrysho_container">
 	<img src="img/mbyll_menu.png" onclick="shfaq_menu_djathtas()" width="100px" style="margin-left: 10px;" />
 	<div style="margin: 15px;">
-		<form method="post" action="ndrysho_student_kontakt_adr.php" >
+		<form method="post" action="ndrysho_student_te_dhena.php" >
 			<div class="menu_tituj" style="font-size: 20px;">Ndrysho te dhenat tuaja ...</div>
 			<hr />
 			<div style="padding: 5px;padding-top: 15px;">
