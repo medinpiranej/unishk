@@ -134,6 +134,7 @@ function hap_mbyll_shto_fakultet(){
 	
 	<div id="divqendror" > 
         <div class="shto" >
+        	<form action="shto_student_nga_admin.php" method="post">
         	<div class='shto_koka' onclick="hap_mbyll_shto_student()">Shto Student<hr /></div>
 			<div  id="div_shto_student" <?php if($shto!="student")echo"style='display:none;'"; ?>>
 			<div style=' width:500px; margin-left: auto;margin-right:auto; '>
@@ -145,9 +146,9 @@ function hap_mbyll_shto_fakultet(){
 				<input name='input_ditelindja_muaji' size="2" maxlength="2"  type='text' id="input_ditelindja_muaji" style='width: 120px;' placeholder='muaji' />
 				<input name='input_ditelindja_viti' size="4" maxlength="4"   type='text' id="input_ditelindja_viti" style='width: 120px;' placeholder='viti' /></div>
 			
-			<div class='menu_tituj' align='right'> Gjinia <select style="width: 359px;">
-																<option>Mashkull</option>
-																<option>Femer</option>
+			<div class='menu_tituj' align='right'> Gjinia <select name="input_gjinia" style="width: 359px;">
+																<option value="1">Mashkull</option>
+																<option value="0">Femer</option>
 			                                               </select>
 			<hr />
 			</div>
@@ -161,15 +162,15 @@ function hap_mbyll_shto_fakultet(){
 			<div style=' width:500px; margin-left: auto;margin-right:auto;'>
 			<div class='menu_tituj' style='font-size: 18px;'>Fjalekalimi</div>
 			<div class='menu_tituj' align='right'>Fjalekalimi <input name='input_pas1' type='password' style='width: 355px;'  placeholder='Fjalekalimi' /></div>
-			<div class='menu_tituj' align='right'>Konfirmimi <input name='input_pas1' type='password' style='width: 355px;'  placeholder='Konfirmimi i fjalekalimit' /></div>
+			<div class='menu_tituj' align='right'>Konfirmimi <input name='input_pas2' type='password' style='width: 355px;'  placeholder='Konfirmimi i fjalekalimit' /></div>
 			<hr />
 			</div>
 			<div style=' width:500px; margin-left: auto;margin-right:auto;'>
 			<div class='menu_tituj' style='font-size: 18px;'>Dega e Studimeve</div>
-			<div class='menu_tituj' align='right'> <select style="width: 359px;">
+			<div class='menu_tituj' align='right'> <select name="input_dega" style="width: 359px;">
 																<?php
 																    for($i=0;$i<sizeof($dege);$i++){
-																    	echo "<option>".$dege[$i]["d_emri"]."</option>";
+																    	echo "<option value='{$dege[$i]["d_id"]}' >".$dege[$i]["d_emri"]."</option>";
 																    }
 																?>
 			                                               </select></div>
@@ -183,8 +184,10 @@ function hap_mbyll_shto_fakultet(){
 	   
 	   <hr />
 	   </div>
+	   </form>
 	   </div>
 <div class="shto" >
+	<form action="shto_admin_nga_admin.php" method="post">
         	<div class='shto_koka' onclick="hap_mbyll_shto_admin()">Shto Administrator<hr /></div>
         	<div  id="div_shto_admin" <?php  if($shto!="admin")echo"style='display:none;'"; ?>>
 			<div style=' width:500px; margin-left: auto;margin-right:auto; '>
@@ -196,9 +199,9 @@ function hap_mbyll_shto_fakultet(){
 				<input name='input_ditelindja_muaji' size="2" maxlength="2"  type='text' id="input_ditelindja_muaji" style='width: 120px;' placeholder='muaji' />
 				<input name='input_ditelindja_viti' size="4" maxlength="4"   type='text' id="input_ditelindja_viti" style='width: 120px;' placeholder='viti' /></div>
 			
-			<div class='menu_tituj' align='right'> Gjinia <select style="width: 359px;">
-																<option>Mashkull</option>
-																<option>Femer</option>
+			<div class='menu_tituj' align='right'>Gjinia <select name="input_gjinia" style="width: 359px;">
+																<option value="1">Mashkull</option>
+																<option value="0">Femer</option>
 			                                               </select>
 			<hr />
 			</div>
@@ -213,7 +216,7 @@ function hap_mbyll_shto_fakultet(){
 			<div style=' width:500px; margin-left: auto;margin-right:auto;'>
 			<div class='menu_tituj' style='font-size: 18px;'>Fjalekalimi</div>
 			<div class='menu_tituj' align='right'>Fjalekalimi <input name='input_pas1' type='password' style='width: 355px;'  placeholder='Fjalekalimi' /></div>
-			<div class='menu_tituj' align='right'>Konfirmimi <input name='input_pas1' type='password' style='width: 355px;'  placeholder='Konfirmimi i fjalekalimit' /></div>
+			<div class='menu_tituj' align='right'>Konfirmimi <input name='input_pas2' type='password' style='width: 355px;'  placeholder='Konfirmimi i fjalekalimit' /></div>
 			<hr />
 			</div>
 			<div style=' width:500px; margin-left: auto;margin-right:auto;'>
@@ -229,9 +232,11 @@ function hap_mbyll_shto_fakultet(){
 	   
 	   <hr />
 	   </div>
+	   </form>
 	   </div>
 	   
 <div class="shto" >
+	<form method="post" action="shto_dege_nga_admin.php">
         	<div class='shto_koka' onclick="hap_mbyll_shto_dege()">Shto Dege Studimesh<hr /></div>
         	<div  id="div_shto_dege" <?php if($shto!="dege")echo"style='display:none;'"; ?>>
 			<div style=' width:500px; margin-left: auto;margin-right:auto; '>
@@ -242,28 +247,18 @@ function hap_mbyll_shto_fakultet(){
 			<div class='menu_tituj' align='right'> Cel <input name='input_cel' type='text'  style='width: 355px;' placeholder='Cel' /></div>
 			<div class='menu_tituj' align='right'> Website <input name='input_ws' type='text'  style='width: 355px;' placeholder='Website' /></div>
 			<div class='menu_tituj' align='right'> Dekani <input name='input_dekani' type='text'  style='width: 355px;' placeholder='Dekani' /></div>
-			<div class='menu_tituj' align='right'> Fakulteti <select style="width: 359px;">
-																<?php
-																    for($i=0;$i<sizeof($fakultet);$i++){
-																    	echo "<option>".$fakultet[$i]["f_emri"]."</option>";
-																    }
-																?>
-			                                               </select></div>
+			<div class='menu_tituj' align='right'> Fakulteti <select name="input_fakulteti" style="width: 355px;"><?php for($i=0;$i<sizeof($fakultet);$i++){echo "<option value='{$fakultet[$i]["f_id"]}'>".$fakultet[$i]["f_emri"]."</option>";}?></select></div>
 			<hr />
-			
-			
-			
-                     <input type='hidden' name='a_id' value=<?php echo "'".$admin[0]['a_id']."'"; ?>>
-			         <div class='menu_tituj' align='right'><input type='submit' style='width: 50%;background-color: #0099ff;color: #FFFFFF;' value='Shto !' /></div>
-		
-		
-        </div>  
-	   
+	    		<input type='hidden' name='a_id' value=<?php echo "'".$admin[0]['a_id']."'"; ?>>
+	            <div class='menu_tituj' align='right'><input type='submit' style='width: 50%;background-color: #0099ff;color: #FFFFFF;' value='Shto !' /></div>
+		</div>  
 	   <hr />
 	   </div>
+	   </form>
 	   </div>
 	   
 <div class="shto" >
+	<form action="shto_fakultet_nga_admin.php" method="post">
         	<div class='shto_koka' onclick="hap_mbyll_shto_fakultet()">Shto Fakultet<hr /></div>
         	<div  id="div_shto_fakultet" <?php if($shto!="fakultet")echo"style='display:none;'"; ?>>
 			<div style=' width:500px; margin-left: auto;margin-right:auto; '>
@@ -276,13 +271,12 @@ function hap_mbyll_shto_fakultet(){
 			<div class='menu_tituj' align='right'> Dekani <input name='input_dekani' type='text'  style='width: 355px;' placeholder='Dekani' /></div>
 			
 			<hr />
-                     <input type='hidden' name='a_id' value=<?php echo "'".$admin[0]['a_id']."'"; ?>>
 			         <div class='menu_tituj' align='right'><input type='submit' style='width: 50%;background-color: #0099ff;color: #FFFFFF;' value='Shto !' /></div>
 		
 			</div>
 		
         </div>  
-	   
+	   </form>
 	   </div>
 	   </div>
 	   
