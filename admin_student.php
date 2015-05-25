@@ -11,6 +11,10 @@
     //if(!isset($_GET["student"]))shfaq listen_e studentave qe mund te modifikosh   gthyujik
     $stud_id=$_GET["student"];
     $lidhja=lidhu();
+	 $dege=exec_query("select * from dege join fakultet on d_fakultet=f_id", $lidhja);
+	 if(empty($dege))$dege=-1;
+	 
+	 
     
     $student=exec_query("Select * from student join dege on s_dega=d_id join fakultet on d_fakultet=f_id where stud_id=$stud_id", $lidhja);
     if(empty($student))header("Location: admin.php?studenti_nuk_ekziston=true");// nqs studenti nuk ekziston e redirektojm kete faqe
@@ -20,6 +24,8 @@
     if(empty($student_admin))$kam_akses_ne_profil=false;
     else $kam_akses_ne_profil=true;
     
+	$kam_akses_ne_profil=true; // kjo do ti lejoje te gjithe admina te modifikojne studentat ... duhet hequr kur te behet komplet funksionale ##################
+	
     $lista_admineve_per_kete_student=exec_query("Select * from student_admin join admin on s_a_admin=a_id where s_a_student=1", $lidhja);
     
     if(empty($lista_admineve_per_kete_student))header("location: admin.php?student_pa_admin=$stud_id");
@@ -101,8 +107,6 @@
                    
   							<div id="ndryshofjalkalimin_kutite">
   								<form method="post" action="ndrysho_student_pas_nga_admin.php">
-                   				 <p  >Fjalkalimi i vjeter</p>
-                    			<input type="password" name="pas_ekz" id="old_pass">
                    					 <p>Fjalkalimi i ri</p>
                     			<input type="password"  name="pas_i_ri"  id="new_pass">
                     			<p>Kofirmo fjalkalimin e ri</p>

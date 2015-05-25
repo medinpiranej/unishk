@@ -17,6 +17,10 @@
 	
     $lidhja=lidhu();
 	
+	 $dege=exec_query("select * from dege join fakultet on d_fakultet=f_id", $lidhja);
+	 if(empty($dege))$dege=-1;
+	 
+	 
 	if($perd!=-1)if($perd[0]["stud_id"]==$stud_id)$profili_i_loguar=true;// tani jemi duge naviguar ne profilin e atij qe eshte loguar
 	
     $student=exec_query("Select * from student join dege on s_dega=d_id join fakultet on d_fakultet=f_id where stud_id=$stud_id", $lidhja);

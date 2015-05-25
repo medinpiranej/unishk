@@ -4,6 +4,7 @@
      if(isset($_SESSION["admin"]))$admin=$_SESSION["admin"];
      else $admin=-1;  //kontrollohet nqs eshte i loguar ndonje admin 
      
+	 $lidhja=lidhu();
 	 if(isset($_SESSION["perdorues"]))$perd=$_SESSION["perdorues"];
 	 else $perd=-1;   //kontrollohet nqs eshte i loguar ndonje student
 	 
@@ -14,12 +15,13 @@
 	 $admin_i_loguar=false;
 	 if(($admin!=-1))if($admin[0]["a_id"]==$admin_i_hapur)$admin_i_loguar=true;
 	
+	 $dege=exec_query("select * from dege join fakultet on d_fakultet=f_id", $lidhja);
+	 if(empty($dege))$dege=-1;
 	 
-	 $lidhja=-1;
+	 
 	 
 	 $skripte="";
 	 if($admin_i_hapur!=-1){
-	     $lidhja=lidhu();
 	     $admin_obj=exec_query("Select * from admin where a_id=$admin_i_hapur", $lidhja);
 	     if(empty($admin_obj))header("Location: admin.php?admini_nuk_ekziston=true");// nqs studenti nuk ekziston e redirektojm kete faqe
          $skripte="<link href='css/cssEprofilit.css' rel='stylesheet' type='text/css'>";
@@ -115,12 +117,10 @@
             </div>
       </div>
      <div id='divi_i_rezultatit' >
-        <img src='img/loadingimg.gif' width='100'>
+        <img src='img/loadingimg.gif'>
         
      </div>
-       <input type='button' onclick='shfaq_listen_e_studentave()' value='lista e studentave te mi' />
-       <a href='kolege.php'>Kolege e mi</a>
-       <a href='log.php'>log mbi aktivitetin e faqes</a>
+       
        <div style='display: none' id='divi_listes_se_studentave'>
        	
        </div>

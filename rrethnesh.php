@@ -9,45 +9,26 @@
 	 if(isset($_GET['login']))$kat="Login";
 	 else $kat="Miresevini";
 	 
+	 
+	 $lidhja=lidhu();
+	 $dege=exec_query("select * from dege join fakultet on d_fakultet=f_id", $lidhja);
+	 if(empty($dege))$dege=-1;
+	 
+	 
+	 
 	 shfaq_koken_e_faqes($kat,"");
 ?>
 <div class="content" id="kerko_id" >
-	<div width="80%" class="info_div">
+	<div  class="info_div"  style="width: 80%;margin-left:auto;margin-right:auto;margin-top: 40px;">
 		
-		<div class="post">
-			<div class="post_mrena">
-			<div class="divi_fotos" width="200px" >
-				<img width="200px" src="perd1/foto/export.jpg" />
-			</div>
-			</div>
-			<div class="divi_pershkrimi">
-			<div class="emri">Medin Piranej</div>
-			<div class="pershkrimi">Medin Piranej asefsadsadsadsafdsafsdg dsgfsdfjksdhfsdiuhfjkdshfuidshfis</div>
-			</div>
-		</div>
-		<div class="post">
-			<div class="post_mrena">
-			<div class="divi_fotos" idth="200px">
-				<img width="200px" src="perd3/foto/11225513_904146869627964_1080658095_n.jpg" />
-			</div>
-			</div>
-			<div class="divi_pershkrimi" >
-			<div class="emri">Medina Cura</div>
-			<div class="pershkrimi">Medina dghasks fgnj jh hj h l afsdgdsgfsdfjksdhfsdiuhfjkdshfuidshfis</div>
-			</div>
-		</div>
 		
-		<div class="post">
-			<div class="post_mrena">
-			<div class="divi_fotos" >
-				<img width="200px" src="perd1/foto/10455123_840499562680528_7050392933953884544_n.jpg" />
-			</div>
-			</div>
-			<div class="divi_pershkrimi" width="300px" >
-			<div class="emri">Bamirs Bajraktari</div>
-			<div class="pershkrimi">Medina ds afsdgdsgfsdfjksdhfsdiuhfjkdshfuidshfis</div>
-			</div>
-		</div>
+			<a href='admin.php?admin=1'> <div class='rezdivleft'  style="width: 100%; height: 300px;" ><div id='div_rez_foto' style="width: 220px;" ><img src='admin/1/foto/export.jpg' ></div><h4 style="font-size: 30px;" id='div_rez_emer'>Medin Piranej</h4><h5 style="font-size: 16px;" id='div_rez_dega'>Email:&nbsp;<i>mpiranej@gmail.com</i></h5><h5 style="font-size: 16px;" id='div_rez_adresa'>Adresa:&nbsp;<i>Mushan , Dajc , Shkoder , Shqiperi</i></h5><h5 style="font-size: 16px;" id='div_rez_adresa'>Roli ne faqe :&nbsp;Krijuesi , Administatori</h5></div></a>
+	
+			<a href='student.php?student=3'> <div class='rezdivleft'  style="width: 100%; height: 300px;" ><div id='div_rez_foto' style="width: 220px;" ><img src='studente/3/foto/medina.jpg' ></div><h4 style="font-size: 30px;" id='div_rez_emer'>Medina Cura</h4><h5 style="font-size: 16px;" id='div_rez_dega'>Email:&nbsp;<i>Medinacuraemail</i></h5><h5 style="font-size: 16px;" id='div_rez_adresa'>Adresa:&nbsp;<i> Shkoder , Shqiperi</i></h5></div></a>
+	
+			<a href='student.php?student=2'> <div class='rezdivleft'  style="width: 100%; height: 300px;" ><div id='div_rez_foto' style="width: 220px;" ><img src='img/def_profile_pic.jpg' ></div><h4 style="font-size: 30px;" id='div_rez_emer'>Bamirs Bajraktari</h4><h5 style="font-size: 16px;" id='div_rez_dega'>Email:&nbsp;<i>bamirs@gmail.com</i></h5><h5 style="font-size: 16px;" id='div_rez_adresa'>Adresa:&nbsp;<i>Shkoder , Shqiperi</i></h5><h5 style="font-size: 16px;" id='div_rez_adresa'>Roli ne faqe :&nbsp;Dizajner</h5></div></a>
+	
+		
 		
 		
 	</div>

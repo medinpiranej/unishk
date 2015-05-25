@@ -9,6 +9,11 @@
 	 if(isset($_GET['login']))$kat="Login";
 	 else $kat="Miresevini";
 	 
+	 $lidhja=lidhu();
+	 $dege=exec_query("select * from dege join fakultet on d_fakultet=f_id", $lidhja);
+	 if(empty($dege))$dege=-1;
+	 
+	 
 	 
 	 if(isset($_SESSION["admin"]))header("location: admin.php");
 	 

@@ -8,7 +8,7 @@
      
 	 $lidhja=lidhu();
 	 
-     $student=exec_query("Select * from student_admin join student on s_a_student=stud_id where s_a_admin={$admin[0]["a_id"]}", $lidhja);
+     $student=exec_query("Select * from student_admin join student on s_a_student=stud_id join dege on s_dega=d_id where s_a_admin={$admin[0]["a_id"]}", $lidhja);
     
      if(!empty($student))echo json_encode($student);
 	 else echo json_encode(array(-1));	

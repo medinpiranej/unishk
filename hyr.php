@@ -4,6 +4,11 @@
 	 $kat="Login ";
      $admin=-1;
 	 $perd=-1;
+	 $lidhja=lidhu();
+	 $dege=exec_query("select * from dege join fakultet on d_fakultet=f_id", $lidhja);
+	 if(empty($dege))$dege=-1;
+	 
+	 
 	 shfaq_koken_e_faqes($kat,"");
 ?>
 <div class='content' id="login_id">

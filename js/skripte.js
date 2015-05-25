@@ -116,22 +116,22 @@ function kerko(tipi_output){
    
    
      $(".topfilterdiv").slideDown('normal');
-	document.getElementById("divi_i_rezultatit").style.display="block";
 	
     json=JSON.parse(httpGet("kerko.php?kerko="+kerko));
     i=0;
     document.getElementById("divi_i_rezultatit").innerHTML="";//fshijem divin
    $("#divi_i_rezultatit").css("width","100%");
+    document.getElementById("divi_i_rezultatit").innerHTML+="<div class='teme_rez_kerkimi'>Rezultatet e kerkimit ... </div><hr>";
     if(json[0][0]!=undefined)//kontrollojme nese kemi ndonje rezultat
 	while(json[i]!=undefined){ // printojme rezultatet 
          var temphtml =$("#divi_i_rezultatit").html();
         if(tipi_output==0) $("#divi_i_rezultatit").html(temphtml+"<a href='student.php?student="+json[i]["stud_id"]+"'> <div class='rezdivleft' ><div id='div_rez_foto'><img src='"+json[i]["s_foto"]+"' width='70'></div><h4 id='div_rez_emer'>"+json[i]["s_emri"]+" "+json[i]["s_mbiemri"]+"</h4><h5 id='div_rez_dega'>Email:&nbsp;<i>"+json[i]["s_email"]+"</i></h5> <h5 id='div_rez_dega'>Dega:&nbsp;<i>"+json[i]["d_emri"]+"</i></h5> <h5 id='div_rez_adresa'>Adresa:&nbsp;<i>"+json[i]["s_adr"]+"</i></h5></div></a>");
-        else if(tipi_output==1) $("#divi_i_rezultatit").html(temphtml+"<a href='admin_student.php?student="+json[i]["stud_id"]+"'> <div class='rezdivleft' ><div id='div_rez_foto'><img src='"+json[i]["s_foto"]+"' width='70'></div><h4 id='div_rez_emer'>"+json[i]["s_emri"]+" "+json[i]["s_mbiemri"]+"</h4><h5 id='div_rez_dega'>Email:&nbsp;<i>"+json[i]["s_email"]+"</i></h5> <h5 id='div_rez_dega'>Dega:&nbsp;<i>"+json[i]["s_dega"]+"</i></h5> <h5 id='div_rez_adresa'>Adresa:&nbsp;<i>"+json[i]["s_adr"]+"</i></h5></div></a>");
+        else if(tipi_output==1) $("#divi_i_rezultatit").html(temphtml+"<a href='admin_student.php?student="+json[i]["stud_id"]+"'> <div class='rezdivleft' ><div id='div_rez_foto'><img src='"+json[i]["s_foto"]+"' width='70'></div><h4 id='div_rez_emer'>"+json[i]["s_emri"]+" "+json[i]["s_mbiemri"]+"</h4><h5 id='div_rez_dega'>Email:&nbsp;<i>"+json[i]["s_email"]+"</i></h5> <h5 id='div_rez_dega'>Dega:&nbsp;<i>"+json[i]["d_emri"]+"</i></h5> <h5 id='div_rez_adresa'>Adresa:&nbsp;<i>"+json[i]["s_adr"]+"</i></h5></div></a>");
         
 	
     i++;
     }
-    else document.getElementById("divi_i_rezultatit").innerHTML="nuk u gjet gje"+json[0];
+    else document.getElementById("divi_i_rezultatit").innerHTML="nuk u gjet gje";
     
 }
 
@@ -148,14 +148,13 @@ function shfaq_listen_e_studentave(){
     i=0;
     document.getElementById("divi_listes_se_studentave").innerHTML="";//fshijem divin
     document.getElementById("divi_listes_se_studentave").style.display="inline-block";
+    document.getElementById("divi_listes_se_studentave").innerHTML+="<div class='teme_rez_kerkimi'>Studentat e mi ...</div><hr>";
     //$("#divi_listes_se_studentave").css("width","100%");
     if(json[0][0]!=undefined)//kontrollojme nese kemi ndonje rezultat
 	while(json[i]!=undefined){ // printojme rezultatet 
 		
-       document.getElementById("divi_listes_se_studentave").innerHTML+="<a href='admin_student.php?student="+json[i]["stud_id"]+"'> <div class='rezdivleft' ><div id='div_rez_foto'><img src='"+json[i]["s_foto"]+"' width='70'></div><h4 id='div_rez_emer'>"+json[i]["s_emri"]+" "+json[i]["s_mbiemri"]+"</h4><h5 id='div_rez_dega'>Email:&nbsp;<i>"+json[i]["s_email"]+"</i></h5> <h5 id='div_rez_dega'>Dega:&nbsp;<i>"+json[i]["s_dega"]+"</i></h5> <h5 id='div_rez_adresa'>Adresa:&nbsp;<i>"+json[i]["s_adr"]+"</i></h5></div></a>";
+       document.getElementById("divi_listes_se_studentave").innerHTML+="<a href='admin_student.php?student="+json[i]["stud_id"]+"'> <div class='rezdivleft' ><div id='div_rez_foto'><img src='"+json[i]["s_foto"]+"' width='70'></div><h4 id='div_rez_emer'>"+json[i]["s_emri"]+" "+json[i]["s_mbiemri"]+"</h4><h5 id='div_rez_dega'>Email:&nbsp;<i>"+json[i]["s_email"]+"</i></h5> <h5 id='div_rez_dega'>Dega:&nbsp;<i>"+json[i]["d_emri"]+"</i></h5> <h5 id='div_rez_adresa'>Adresa:&nbsp;<i>"+json[i]["s_adr"]+"</i></h5></div></a>";
         
 	   i++;
 	}
-	
-	alert("ok");
 }

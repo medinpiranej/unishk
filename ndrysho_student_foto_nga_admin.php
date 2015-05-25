@@ -12,7 +12,8 @@
      $perd=exec_query("Select * from student where stud_id=".$_POST["s_id"], $lidhja);
 	 
 	 $student_admin=exec_query("Select * from student_admin where s_a_admin={$admin[0]["a_id"]} and s_a_student=".$perd[0]["stud_id"], $lidhja);
-     if(empty($student_admin))header("Location: index.php?gabim_ne_nderrimin_e_fotos");
+    // if(empty($student_admin))header("Location: index.php?gabim_ne_nderrimin_e_fotos");  kjo do ti lejoje te gjithe admina te modifikojne studentat ... duhet hequr kur te behet komplet funksionale ##################
+    
     
 	 
 	  $admin_tmp=exec_query("Select * from admin where a_id=".$admin[0]["a_id"], $lidhja);
